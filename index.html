@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<title>AuraScale</title>
+<title>AuraScale | Strategic Growth Architecture</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -33,15 +33,15 @@
   .serif{font-family:'Playfair Display',Georgia,serif}
   img{display:block;max-width:100%}
 
-  /* ── NAV ── */
+  /* ── NAVIGATION ── */
   nav{background:var(--em-dark);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:66px;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border)}
   .nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--white);text-decoration:none}
   .nav-logo span{color:var(--gold-light)}
   .nav-links{display:flex;gap:2rem;list-style:none}
-  .nav-links a{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--w45);text-decoration:none;transition:color .2s}
-  .nav-links a:hover{color:var(--gold-light)}
-  .nav-cta{background:transparent;color:var(--gold-light);font-size:11px;font-weight:500;padding:9px 20px;border-radius:2px;border:1px solid var(--gold);cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.12em;text-transform:uppercase;transition:background .2s,color .2s}
-  .nav-cta:hover{background:var(--gold);color:var(--em-dark)}
+  .nav-links a{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--w45);text-decoration:none;transition:all .3s ease}
+  .nav-links a:hover{color:var(--gold-light);letter-spacing:0.22em}
+  .nav-cta{background:transparent;color:var(--gold-light);font-size:10.5px;font-weight:600;padding:10px 22px;border-radius:2px;border:1px solid var(--gold);cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.16em;text-transform:uppercase;transition:all .3s ease}
+  .nav-cta:hover{background:var(--gold);color:var(--em-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(197,163,103,0.2)}
   .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
   .hamburger span{width:22px;height:1.5px;background:var(--w70);border-radius:2px;transition:.3s}
   .mobile-menu{display:none;position:fixed;top:66px;left:0;right:0;background:var(--em-dark);border-bottom:1px solid var(--border);z-index:99;padding:1.5rem 2rem;flex-direction:column;gap:1.25rem}
@@ -57,37 +57,42 @@
   .hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.65}
   .hero-right::before{content:'';position:absolute;top:0;left:0;bottom:0;width:120px;background:linear-gradient(to right,var(--em-dark),transparent);z-index:1}
   .hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(6,44,45,.55) 0%,transparent 60%);z-index:1}
-  .overline{font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem}
-  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem, 3.5vw, 3rem);font-weight:500;line-height:1.16;color:var(--white);margin-bottom:1.4rem}
-  .hero h1 em{color:var(--gold-light);font-style:italic}
-  .hero p{font-size:14px;line-height:1.85;color:var(--w70);margin-bottom:2.2rem;font-weight:300;max-width:420px}
-  .btn-gold{display:inline-block;background:var(--gold);color:var(--em-dark);padding:14px 30px;border-radius:2px;font-size:11.5px;font-weight:600;cursor:pointer;border:none;font-family:'Inter',sans-serif;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;transition:background .2s}
-  .btn-gold:hover{background:var(--gold-light)}
-  .hero-badges{margin-top:1.75rem;display:flex;gap:1.5rem;flex-wrap:wrap}
-  .badge-item{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--w45);letter-spacing:0.06em;text-transform:uppercase}
-  .badge-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+  .overline{font-size:9.5px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.25rem;display:block}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem, 4vw, 3.4rem);font-weight:500;line-height:1.1;color:var(--white);margin-bottom:1.6rem;animation:fadeInUp 0.8s ease-out}
+  .hero h1 em{color:var(--gold-light);font-style:italic;font-weight:400}
+  .hero p{font-size:14.5px;line-height:1.9;color:var(--w70);margin-bottom:2.5rem;font-weight:300;max-width:440px;animation:fadeInUp 1s ease-out}
+  .btn-gold{display:inline-block;background:var(--gold);color:var(--em-dark);padding:16px 34px;border-radius:2px;font-size:11px;font-weight:700;cursor:pointer;border:none;font-family:'Inter',sans-serif;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;transition:all .3s ease;box-shadow:0 4px 14px rgba(197,163,103,0.15)}
+  .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(197,163,103,0.25)}
+  .hero-badges{margin-top:2rem;display:flex;gap:1.75rem;flex-wrap:wrap;animation:fadeInUp 1.2s ease-out}
+  .badge-item{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--w45);letter-spacing:0.1em;text-transform:uppercase;font-weight:500}
+  .badge-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
 
-  /* ── STAT STRIP ── */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── STATS ── */
   .stat-strip{background:var(--em-mid);border-top:1px solid var(--border-gold);border-bottom:1px solid var(--border-gold);padding:2rem 2rem}
   .stat-strip-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
   .s-stat{text-align:center;padding:.5rem}
   .s-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:500;color:var(--gold-light);text-transform: uppercase}
   .s-lbl{font-size:11px;color:var(--w45);margin-top:4px;line-height:1.45;text-transform: capitalize}
 
-  /* ── IMAGE BAND ── */
+  /* ── IMAGES ── */
   .img-band{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
   .img-cell{position:relative;overflow:hidden;height:220px}
   .img-cell img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.80) brightness(.88)}
   .img-cell-label{position:absolute;bottom:0;left:0;right:0;background:rgba(3,30,31,.75);color:var(--gold-light);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;padding:9px 14px;font-family:'Inter',sans-serif;font-weight:500}
 
-  /* ── SECTIONS ── */
+  /* ── LAYOUT ── */
   section{padding:6rem 2rem}
   .container{max-width:1040px;margin:0 auto}
   .sec-head{margin-bottom:3.5rem}
   .sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.75rem,3vw,2.4rem);font-weight:500;color:var(--white);line-height:1.22;margin-bottom:.75rem}
   .sec-sub{font-size:14px;color:var(--w70);line-height:1.85;max-width:520px;font-weight:300}
 
-  /* ── AURA SECTION ── */
+  /* ── AURA / SCALE ── */
   .aura-sec{background:var(--em-base)}
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
   .aura-card{background:var(--w06);border:1px solid var(--border);border-radius:4px;padding:2.5rem;position:relative;overflow:hidden;transition:border-color .3s}
@@ -203,7 +208,7 @@
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav>
   <a class="nav-logo" href="#">Aura<span>Scale</span></a>
   <ul class="nav-links">
@@ -225,7 +230,7 @@
   <a class="mob-cta" href="#contact" onclick="closeMenu()">Request 10-Minute Audit</a>
 </div>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-grid">
     <div class="hero-left">
@@ -248,7 +253,7 @@
   </div>
 </section>
 
-<!-- STAT STRIP -->
+<!-- KPIs -->
 <div class="stat-strip">
   <div class="stat-strip-inner">
     <div class="s-stat"><div class="s-num">24/7</div><div class="s-lbl">lead tracking and Performance monitoring</div></div>
@@ -258,7 +263,7 @@
   </div>
 </div>
 
-<!-- IMAGE BAND -->
+<!-- CAPABILITIES IMAGES -->
 <div class="img-band">
   <div class="img-cell">
     <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&q=75" alt="Surgical excellence"/>
@@ -274,7 +279,7 @@
   </div>
 </div>
 
-<!-- AURA ADVANTAGE -->
+<!-- VALUE PROPOSITION -->
 <section class="aura-sec">
   <div class="container">
     <div class="sec-head">
@@ -314,8 +319,8 @@
   <div class="container">
     <div class="sec-head">
       <div class="overline">Core Services</div>
-      <h2 class="sec-title serif">Built for the complexity of healthcare marketing.</h2>
-      <p class="sec-sub">Every service is engineered from the ground up for the regulatory and reputational demands of modern medical practice.</p>
+      <h2 class="sec-title serif">Built for the complexity of healthcare patient growth.</h2>
+      <p class="sec-sub">Every solution is engineered from the ground up for the regulatory and reputational demands of modern medical practice.</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card">
@@ -346,7 +351,7 @@
   </div>
 </section>
 
-<!-- WHY -->
+<!-- WHY AURASCALE -->
 <section class="why-sec">
   <div class="container">
     <div class="sec-head">
@@ -385,7 +390,7 @@
   </div>
 </section>
 
-<!-- FOUNDER -->
+<!-- THE FOUNDER -->
 <section class="founder-sec" id="about">
   <div class="container">
     <div class="founder-inner">
@@ -398,8 +403,8 @@
       </div>
       <div class="founder-content">
         <div class="overline">A Note from the Founder</div>
-        <h2 class="sec-title serif" style="max-width:440px">Ethical marketing is not a constraint. It is the strategy.</h2>
-        <blockquote class="serif">"Healthcare professionals dedicate their lives to healing others. They deserve a marketing partner who approaches their practice with the same rigor, care, and ethical conviction they bring to the clinic. We exist because the gap between outstanding clinical outcomes and the patients who need them is, too often, a digital one."</blockquote>
+        <h2 class="sec-title serif" style="max-width:440px">Ethical growth is not a constraint. It is the strategy.</h2>
+        <blockquote class="serif">"Healthcare professionals dedicate their lives to healing others. They deserve a strategic growth partner who approaches their practice with the same rigor, care, and ethical conviction they bring to the clinic. We exist because the gap between outstanding clinical outcomes and the patients who need them is, too often, a digital one."</blockquote>
         <div style="margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--border)">
           <div class="sig-name serif">Mousham Ahmed Laskar</div>
           <div class="sig-title">Founder &amp; CEO · AuraScale</div>
@@ -409,7 +414,7 @@
   </div>
 </section>
 
-<!-- PROCESS -->
+<!-- METHODOLOGY -->
 <section class="process-sec" id="process">
   <div class="container">
     <div class="sec-head">
@@ -431,7 +436,7 @@
       <div class="step">
         <div class="step-num serif">03</div>
         <h4 class="serif">Compliance press launch</h4>
-        <p>Campaign deployment by specialists fluent in the language and regulations of modern medical marketing.</p>
+        <p>Campaign deployment by specialists fluent in the language and regulations of modern medical growth strategy.</p>
       </div>
       <div class="step">
         <div class="step-num serif">04</div>
@@ -442,7 +447,7 @@
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CALL TO ACTION -->
 <section class="cta-sec" id="contact">
   <img class="cta-bg" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1400&q=60" alt=""/>
   <div class="cta-inner">
@@ -458,11 +463,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-logo serif">Aura<span>Scale</span></div>
-      <div class="footer-tagline">Marketing for Healthcare Leaders<br>Founded by Mousham Ahmed Laskar</div>
-      <div style="font-size: 11px; color: #FFFFFF; margin-top: 15px; font-weight: 700; font-family: 'Inter', sans-serif; line-height: 1.6;">
-        <span style="color: #d4b87a; text-transform: uppercase; letter-spacing: 0.05em;">Udyam Reg No:</span> WB-18-0186128 <br>
-        <span style="color: #d4b87a; text-transform: uppercase; letter-spacing: 0.05em;">GSTIN:</span> 19BDYPL9210K1ZR
-      </div>
+      <div class="footer-tagline">Growth Strategies for Healthcare Leaders<br>Founded by Mousham Ahmed Laskar</div>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
@@ -484,8 +485,14 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 AuraScale. All rights reserved.</p>
-    <p>HIPAA-Compliant Operations &nbsp;·&nbsp; Healthcare Marketing</p>
+    <div style="display: flex; flex-direction: column; gap: 5px;">
+      <p style="margin-bottom: 0;">© 2026 AuraScale. All rights reserved.</p>
+      <p style="font-size: 9.5px; color: rgba(255,255,255,0.25); letter-spacing: 0.03em; margin: 0;">
+        <span style="color: #d4b87a; opacity: 0.9; font-weight: 600;">UDYAM:</span> WB-18-0186128 &nbsp;·&nbsp; 
+        <span style="color: #d4b87a; opacity: 0.9; font-weight: 600;">GSTIN:</span> 19BDYPL9210K1ZR
+      </p>
+    </div>
+    <p>HIPAA-Compliant Operations &nbsp;·&nbsp; Strategic Growth Architecture</p>
   </div>
 </footer>
 
