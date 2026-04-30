@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
-<title>AuraScale</title>
+<title>AuraScale™ — Precision Growth for Healthcare Leaders</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -37,6 +37,7 @@
   nav{background:var(--em-dark);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:66px;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border)}
   .nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--white);text-decoration:none}
   .nav-logo span{color:var(--gold-light)}
+  .nav-logo sup{font-size:11px;color:var(--gold);vertical-align:super;font-family:'Inter',sans-serif;font-weight:400}
   .nav-links{display:flex;gap:2rem;list-style:none}
   .nav-links a{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--w45);text-decoration:none;transition:all .3s ease}
   .nav-links a:hover{color:var(--gold-light);letter-spacing:0.22em}
@@ -54,7 +55,7 @@
   .hero-grid{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:560px}
   .hero-left{padding:5.5rem 3rem 5.5rem 2rem;display:flex;flex-direction:column;justify-content:center}
   .hero-right{position:relative;overflow:hidden}
-  .hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.65}
+  .hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.65;filter:saturate(.8) brightness(.85)}
   .hero-right::before{content:'';position:absolute;top:0;left:0;bottom:0;width:120px;background:linear-gradient(to right,var(--em-dark),transparent);z-index:1}
   .hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(6,44,45,.55) 0%,transparent 60%);z-index:1}
   .overline{font-size:9.5px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.25rem;display:block}
@@ -67,22 +68,29 @@
   .badge-item{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--w45);letter-spacing:0.1em;text-transform:uppercase;font-weight:500}
   .badge-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
 
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
   /* ── STAT STRIP ── */
   .stat-strip{background:var(--em-mid);border-top:1px solid var(--border-gold);border-bottom:1px solid var(--border-gold);padding:2rem 2rem}
   .stat-strip-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
   .s-stat{text-align:center;padding:.5rem}
-  .s-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:500;color:var(--gold-light);text-transform: uppercase}
-  .s-lbl{font-size:11px;color:var(--w45);margin-top:4px;line-height:1.45;text-transform: capitalize}
+  .s-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:500;color:var(--gold-light);text-transform:uppercase}
+  .s-lbl{font-size:11px;color:var(--w45);margin-top:4px;line-height:1.45;text-transform:capitalize}
+
+  /* ── INTL EXPANSION BANNER ── */
+  .intl-banner{background:var(--em-dark);border-top:1px solid var(--border-gold);border-bottom:1px solid var(--border-gold);padding:1.1rem 2rem;overflow:hidden;position:relative}
+  .intl-banner::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,var(--gold),transparent)}
+  .intl-banner-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+  .intl-pill{background:var(--gold-pale);border:1px solid var(--border-gold);border-radius:2px;padding:4px 14px;font-size:9px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-light);white-space:nowrap}
+  .intl-text{font-size:13px;color:var(--w70);font-weight:300;letter-spacing:0.02em}
+  .intl-text strong{color:var(--white);font-weight:500}
+  .intl-line{flex:1;height:1px;background:linear-gradient(to right,var(--border-gold),transparent);min-width:40px}
 
   /* ── IMAGE BAND ── */
   .img-band{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
   .img-cell{position:relative;overflow:hidden;height:220px}
-  .img-cell img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.80) brightness(.88)}
+  .img-cell img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.75) brightness(.82) contrast(1.05)}
+  .img-cell:hover img{filter:saturate(.9) brightness(.9) contrast(1.0);transition:filter .4s ease}
   .img-cell-label{position:absolute;bottom:0;left:0;right:0;background:rgba(3,30,31,.75);color:var(--gold-light);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;padding:9px 14px;font-family:'Inter',sans-serif;font-weight:500}
 
   /* ── SECTIONS ── */
@@ -107,10 +115,10 @@
   /* ── SERVICES ── */
   .svc-sec{background:var(--em-dark)}
   .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-  .svc-card{background:var(--w06);border:1px solid var(--border);border-radius:4px;overflow:hidden;position:relative;transition:border-color .3s}
-  .svc-card:hover{border-color:var(--border-gold)}
-  .svc-img{width:100%;height:140px;object-fit:cover;object-position:center;filter:saturate(.78) brightness(.82);transition:filter .4s}
-  .svc-card:hover .svc-img{filter:saturate(.9) brightness(.92)}
+  .svc-card{background:var(--w06);border:1px solid var(--border);border-radius:4px;overflow:hidden;position:relative;transition:border-color .3s,transform .3s}
+  .svc-card:hover{border-color:var(--border-gold);transform:translateY(-3px)}
+  .svc-img{width:100%;height:140px;object-fit:cover;object-position:center;filter:saturate(.75) brightness(.80) contrast(1.05);transition:filter .4s}
+  .svc-card:hover .svc-img{filter:saturate(.92) brightness(.9) contrast(1.0)}
   .svc-body{padding:1.75rem}
   .svc-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500;color:var(--white);margin-bottom:.7rem}
   .svc-card p{font-size:13px;line-height:1.72;color:var(--w70);font-weight:300}
@@ -144,9 +152,33 @@
   .step h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:500;color:var(--white);margin-bottom:.5rem}
   .step p{font-size:13px;color:var(--w45);line-height:1.68;font-weight:300}
 
+  /* ── AUDIT FORM ── */
+  .audit-sec{background:var(--em-base);border-top:1px solid var(--border)}
+  .audit-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+  .audit-left .overline{margin-bottom:1.25rem}
+  .audit-left h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,2.8vw,2.2rem);font-weight:500;color:var(--white);line-height:1.22;margin-bottom:1rem}
+  .audit-left p{font-size:13.5px;color:var(--w70);line-height:1.85;font-weight:300;margin-bottom:1.5rem}
+  .audit-promise{display:flex;flex-direction:column;gap:10px;margin-top:2rem}
+  .audit-promise-item{display:flex;align-items:center;gap:12px;font-size:12.5px;color:var(--w70)}
+  .audit-promise-item svg{width:16px;height:16px;stroke:var(--gold-light);fill:none;stroke-width:2;flex-shrink:0}
+  .audit-form{background:var(--w06);border:1px solid var(--border);border-radius:4px;padding:2.5rem}
+  .form-row{margin-bottom:1.5rem}
+  .form-row label{display:block;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:.65rem}
+  .form-row input,
+  .form-row select{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:2px;padding:13px 16px;font-size:13.5px;color:var(--white);font-family:'Inter',sans-serif;font-weight:300;transition:border-color .3s,background .3s;outline:none;-webkit-appearance:none;appearance:none}
+  .form-row select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d4b87a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:rgba(255,255,255,0.04);padding-right:40px}
+  .form-row select option{background:var(--em-dark);color:var(--white)}
+  .form-row input::placeholder{color:var(--w20)}
+  .form-row input:focus,
+  .form-row select:focus{border-color:var(--border-gold);background:rgba(197,163,103,0.05)}
+  .form-two{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+  .form-btn{width:100%;background:var(--gold);color:var(--em-dark);padding:17px;border-radius:2px;font-size:11px;font-weight:700;cursor:pointer;border:none;font-family:'Inter',sans-serif;letter-spacing:0.18em;text-transform:uppercase;transition:all .3s ease;margin-top:.5rem}
+  .form-btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(197,163,103,0.25)}
+  .form-note{font-size:10.5px;color:var(--w20);text-align:center;margin-top:1rem;letter-spacing:.06em}
+
   /* ── CTA ── */
   .cta-sec{background:var(--em-soft);position:relative;overflow:hidden;padding:7rem 2rem;text-align:center;border-top:1px solid var(--border-gold);border-bottom:1px solid var(--border-gold)}
-  .cta-bg{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;opacity:.08}
+  .cta-bg{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;opacity:.08;filter:saturate(.5)}
   .cta-inner{position:relative;z-index:2}
   .cta-sec h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:500;color:var(--white);margin-bottom:1.25rem;line-height:1.2}
   .cta-sec p{font-size:14px;color:var(--w70);max-width:460px;margin:0 auto 2.75rem;line-height:1.85;font-weight:300}
@@ -157,19 +189,23 @@
   .footer-inner{max-width:1040px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:2rem}
   .footer-logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--white);margin-bottom:.5rem}
   .footer-logo span{color:var(--gold-light)}
+  .footer-logo sup{font-size:10px;color:var(--gold);vertical-align:super;font-family:'Inter',sans-serif;font-weight:400}
   .footer-tagline{font-size:11px;color:var(--w45);line-height:1.7}
   .footer-col h5{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem}
   .footer-col a{display:block;font-size:12.5px;color:var(--w45);text-decoration:none;margin-bottom:.6rem;transition:color .2s}
   .footer-col a:hover{color:var(--white)}
   .footer-bottom{max-width:1040px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
   .footer-bottom p{font-size:11px;color:var(--w20);letter-spacing:.04em}
+  .footer-msme{margin-top:.75rem;font-size:11.5px;color:var(--w45);line-height:1.7}
+  .footer-msme strong{color:var(--gold-light);font-weight:500}
 
   /* ── RESPONSIVE ── */
   @media(max-width:1024px){
-    .container { max-width: 900px; }
-    .hero-grid { max-width: 900px; }
-    .svc-grid { grid-template-columns: repeat(2, 1fr); }
-    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .container{max-width:900px}
+    .hero-grid{max-width:900px}
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .audit-inner{grid-template-columns:1fr;gap:3rem}
   }
   @media(max-width:900px){
     .hero-grid{grid-template-columns:1fr}
@@ -183,6 +219,7 @@
     .founder-inner{grid-template-columns:1fr;gap:2.5rem}
     .founder-photo{aspect-ratio:unset;padding:2.5rem 1rem;min-height:200px}
     .stat-strip-inner{grid-template-columns:1fr 1fr}
+    .audit-inner{grid-template-columns:1fr;gap:2.5rem}
   }
   @media(max-width:600px){
     nav{padding:0 1.25rem}
@@ -201,8 +238,12 @@
     .footer-bottom{flex-direction:column;gap:.5rem}
     .hero-left{padding:3rem 1.25rem 2.5rem}
     .cta-sec{padding:5rem 1.25rem}
-    .hero h1 { font-size: 2.2rem; }
-    .sec-title { font-size: 1.8rem; }
+    .hero h1{font-size:2.2rem}
+    .sec-title{font-size:1.8rem}
+    .form-two{grid-template-columns:1fr}
+    .audit-form{padding:1.75rem 1.25rem}
+    .intl-banner-inner{gap:1rem}
+    .intl-line{display:none}
   }
 </style>
 </head>
@@ -210,14 +251,15 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">Aura<span>Scale</span></a>
+  <a class="nav-logo" href="#">Aura<span>Scale</span><sup>™</sup></a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#process">Process</a></li>
+    <li><a href="#audit">10-Min Audit</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">10-Minute Audit</button>
+  <button class="nav-cta" onclick="document.getElementById('audit').scrollIntoView({behavior:'smooth'})">10-Minute Audit</button>
   <div class="hamburger" onclick="toggleMenu()" id="ham">
     <span></span><span></span><span></span>
   </div>
@@ -226,21 +268,22 @@
   <a href="#services" onclick="closeMenu()">Services</a>
   <a href="#about" onclick="closeMenu()">About</a>
   <a href="#process" onclick="closeMenu()">Process</a>
+  <a href="#audit" onclick="closeMenu()">10-Min Audit</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
-  <a class="mob-cta" href="#contact" onclick="closeMenu()">Request 10-Minute Audit</a>
+  <a class="mob-cta" href="#audit" onclick="closeMenu()">Request 10-Minute Audit</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid">
     <div class="hero-left">
-      <h1 style="color: #F5F5F5; font-size: 3rem; line-height: 1.2; font-weight: 700;">
-          <span style="color: #E2BD7E;">Predictable Patient Growth</span> 
-          for 
-          <span style="color: #FFFFFF; font-style: italic; font-weight: 400;">Specialized Practices.</span>
+      <h1 style="color:#F5F5F5;font-size:3rem;line-height:1.2;font-weight:700;">
+        <span style="color:#E2BD7E;">Predictable Patient Growth</span> 
+        for 
+        <span style="color:#FFFFFF;font-style:italic;font-weight:400;">Specialized Practices.</span>
       </h1>
-      <p>Under the vision of Mousham Ahmed Laskar, AuraScale bridges the gap between clinical excellence and authority — scaling patient-centric practices with ethical, data-driven precision.</p>
-      <a class="btn-gold" href="#contact">Request a 10-Minute Practice Audit</a>
+      <p>Under the vision of Mousham Ahmed Laskar, AuraScale™ bridges the gap between clinical excellence and authority — scaling patient-centric practices with ethical, data-driven precision.</p>
+      <a class="btn-gold" href="#audit">Request a 10-Minute Practice Audit</a>
       <div class="hero-badges">
         <div class="badge-item"><div class="badge-dot"></div>HIPAA-Compliant</div>
         <div class="badge-item"><div class="badge-dot"></div>Data-Driven</div>
@@ -256,10 +299,20 @@
 <!-- STAT STRIP -->
 <div class="stat-strip">
   <div class="stat-strip-inner">
-    <div class="s-stat"><div class="s-num">24/7</div><div class="s-lbl">lead tracking and Performance monitoring</div></div>
-    <div class="s-stat"><div class="s-num">Outcome</div><div class="s-lbl">clinical goals</div></div>
-    <div class="s-stat"><div class="s-num">100%</div><div class="s-lbl">HIPAA-Compliant operations &amp; campaigns</div></div>
-    <div class="s-stat"><div class="s-num">Precision</div><div class="s-lbl">patient systems</div></div>
+    <div class="s-stat"><div class="s-num">24/7</div><div class="s-lbl">Lead tracking and performance monitoring</div></div>
+    <div class="s-stat"><div class="s-num">Outcome</div><div class="s-lbl">Aligned with clinical goals</div></div>
+    <div class="s-stat"><div class="s-num">100%</div><div class="s-lbl">HIPAA-compliant operations &amp; campaigns</div></div>
+    <div class="s-stat"><div class="s-num">Precision</div><div class="s-lbl">Patient acquisition systems</div></div>
+  </div>
+</div>
+
+<!-- INTERNATIONAL EXPANSION BANNER -->
+<div class="intl-banner">
+  <div class="intl-banner-inner">
+    <div class="intl-pill">Global Expansion</div>
+    <p class="intl-text">Scaling digital infrastructure for <strong>healthcare providers across South Asia</strong> — including Bangladesh, India, and beyond.</p>
+    <div class="intl-line"></div>
+    <div class="intl-pill" style="white-space:nowrap;font-size:8.5px">South Asia · 2025 Onwards</div>
   </div>
 </div>
 
@@ -283,7 +336,7 @@
 <section class="aura-sec">
   <div class="container">
     <div class="sec-head">
-      <div class="overline">The AuraScale Advantage</div>
+      <div class="overline">The AuraScale™ Advantage</div>
       <h2 class="sec-title serif">Two forces. One unified strategy.</h2>
       <p class="sec-sub">Every element of our name is deliberate. Together they define a complete growth philosophy built exclusively for the modern healthcare practice.</p>
     </div>
@@ -323,22 +376,38 @@
       <p class="sec-sub">Every solution is engineered from the ground up for the regulatory and reputational demands of modern medical practice.</p>
     </div>
     <div class="svc-grid">
+
+      <!-- Service 1 -->
       <div class="svc-card">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=75" alt="Lead generation"/>
+        <img class="svc-img" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=75" alt="Patient acquisition"/>
         <div class="svc-body">
-          <h3 class="serif">HIPAA-Compliant Lead Generation</h3>
-          <p>Precision-targeted patient acquisition campaigns that meet every federal privacy standard — driving high-intent inquiries without compromising patient data or your licensure.</p>
-          <div class="svc-badge">Paid Acquisition</div>
+          <h3 class="serif">Precision Patient Acquisition</h3>
+          <p>HIPAA-compliant, hyper-targeted paid acquisition campaigns engineered for specialized hospitals and surgical centers. We drive high-intent patient inquiries — protecting your licensure and your data pipeline at every step.</p>
+          <div class="svc-badge">HIPAA-Compliant · Paid Acquisition</div>
         </div>
       </div>
+
+      <!-- Service 2 -->
       <div class="svc-card">
-        <img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=75" alt="Medical SEO"/>
+        <img class="svc-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=75" alt="Medical web infrastructure"/>
         <div class="svc-body">
-          <h3 class="serif">Speciality based search dominance</h3>
-          <p>we ensure your practice appears first when patients search for specialised treatment in your local area</p>
-          <div class="svc-badge">Organic Growth</div>
+          <h3 class="serif">Medical Web Infrastructure</h3>
+          <p>Custom HTML/CSS development crafted exclusively for clinics and specialist practices. From patient portals to appointment funnels, we build fast, accessible, and conversion-optimized digital infrastructure that reflects your clinical brand.</p>
+          <div class="svc-badge">Custom Development · Clinics</div>
         </div>
       </div>
+
+      <!-- Service 3 -->
+      <div class="svc-card">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500&q=75" alt="Workflow automation"/>
+        <div class="svc-body">
+          <h3 class="serif">Workflow Automation</h3>
+          <p>AI-driven systems that eliminate administrative friction and multiply clinic efficiency. From automated follow-up sequences to intelligent appointment routing, we replace manual bottlenecks with precision-engineered growth infrastructure.</p>
+          <div class="svc-badge">AI-Driven · Clinic Efficiency</div>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
       <div class="svc-card">
         <img class="svc-img" src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=500&q=75" alt="Reputation management"/>
         <div class="svc-body">
@@ -347,6 +416,27 @@
           <div class="svc-badge">Reputation</div>
         </div>
       </div>
+
+      <!-- Service 5 -->
+      <div class="svc-card">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=500&q=75" alt="Medical SEO"/>
+        <div class="svc-body">
+          <h3 class="serif">Specialty-Based Search Dominance</h3>
+          <p>We ensure your practice appears first when patients search for specialized treatment in your local area — through structured medical SEO and local authority signals that outrank generalist competitors.</p>
+          <div class="svc-badge">Organic Growth · Medical SEO</div>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="svc-card">
+        <img class="svc-img" src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=500&q=75" alt="Clinical analytics"/>
+        <div class="svc-body">
+          <h3 class="serif">Clinical-Grade Analytics</h3>
+          <p>Transparent, granular performance dashboards with ROI metrics your CFO and clinical directors can both trust — updated in real-time and built to your practice's specific acquisition KPIs.</p>
+          <div class="svc-badge">Reporting · ROI Tracking</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -355,7 +445,7 @@
 <section class="why-sec">
   <div class="container">
     <div class="sec-head">
-      <div class="overline">Why AuraScale</div>
+      <div class="overline">Why AuraScale™</div>
       <h2 class="sec-title serif">The standard that defines us.</h2>
     </div>
     <div class="why-grid">
@@ -398,7 +488,7 @@
         <div class="founder-photo">
           <div class="photo-av">MAL</div>
           <div class="photo-nm">Mousham Ahmed Laskar</div>
-          <div class="photo-tl">Founder &amp; CEO · AuraScale</div>
+          <div class="photo-tl">Founder &amp; CEO · AuraScale™</div>
         </div>
       </div>
       <div class="founder-content">
@@ -407,7 +497,7 @@
         <blockquote class="serif">"Healthcare professionals dedicate their lives to healing others. They deserve a strategic growth partner who approaches their practice with the same rigor, care, and ethical conviction they bring to the clinic. We exist because the gap between outstanding clinical outcomes and the patients who need them is, too often, a digital one."</blockquote>
         <div style="margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--border)">
           <div class="sig-name serif">Mousham Ahmed Laskar</div>
-          <div class="sig-title">Founder &amp; CEO · AuraScale</div>
+          <div class="sig-title">Founder &amp; CEO · AuraScale™</div>
         </div>
       </div>
     </div>
@@ -425,23 +515,90 @@
     <div class="steps">
       <div class="step">
         <div class="step-num serif">01</div>
-        <h4 class="serif">Clinical alignment</h4>
+        <h4 class="serif">Clinical Alignment</h4>
         <p>A forensic review of your current presence, competitive landscape, and patient acquisition gaps.</p>
       </div>
       <div class="step">
         <div class="step-num serif">02</div>
-        <h4 class="serif">Patient journey mapping</h4>
+        <h4 class="serif">Patient Journey Mapping</h4>
         <p>A bespoke growth blueprint aligned with your specialty, geography, compliance, and revenue goals.</p>
       </div>
       <div class="step">
         <div class="step-num serif">03</div>
-        <h4 class="serif">Compliance press launch</h4>
+        <h4 class="serif">Compliant Press Launch</h4>
         <p>Campaign deployment by specialists fluent in the language and regulations of modern medical growth strategy.</p>
       </div>
       <div class="step">
         <div class="step-num serif">04</div>
-        <h4 class="serif">Reporting and refinement</h4>
+        <h4 class="serif">Reporting &amp; Refinement</h4>
         <p>Transparent, clinical-grade reporting with continuous optimization toward your patient acquisition KPIs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10-MINUTE AUDIT FORM -->
+<section class="audit-sec" id="audit">
+  <div class="container">
+    <div class="audit-inner">
+      <div class="audit-left">
+        <div class="overline">Free Practice Audit</div>
+        <h2>Discover exactly what's holding your practice back.</h2>
+        <p>In 10 focused minutes, our AuraScale™ strategy team will analyze your current digital presence, identify your highest-leverage growth gap, and outline a clear, actionable path forward — at no cost and no obligation.</p>
+        <div class="audit-promise">
+          <div class="audit-promise-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Strictly confidential — your data stays private
+          </div>
+          <div class="audit-promise-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            No sales pressure or follow-up spam
+          </div>
+          <div class="audit-promise-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Healthcare providers only — tailored insight
+          </div>
+          <div class="audit-promise-item">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Response within one business day
+          </div>
+        </div>
+      </div>
+      <div class="audit-form">
+        <div class="overline" style="margin-bottom:1.75rem">Request Your Audit</div>
+        <div class="form-two">
+          <div class="form-row">
+            <label>Full Name</label>
+            <input type="text" placeholder="Dr. Jane Sharma" autocomplete="name"/>
+          </div>
+          <div class="form-row">
+            <label>Designation</label>
+            <input type="text" placeholder="Cardiologist / Director" autocomplete="organization-title"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Clinic / Hospital Name</label>
+          <input type="text" placeholder="Apollo Specialty Centre" autocomplete="organization"/>
+        </div>
+        <div class="form-row">
+          <label>Official Email</label>
+          <input type="email" placeholder="doctor@yourclinic.com" autocomplete="email"/>
+        </div>
+        <div class="form-row">
+          <label>Primary Growth Goal</label>
+          <select>
+            <option value="" disabled selected>Select your primary goal</option>
+            <option>Increase qualified patient inquiries</option>
+            <option>Improve online reputation &amp; reviews</option>
+            <option>Dominate local search rankings</option>
+            <option>Automate patient follow-up &amp; workflows</option>
+            <option>Launch or redesign clinic website</option>
+            <option>Expand into new geographies</option>
+            <option>Reduce cost per patient acquisition</option>
+          </select>
+        </div>
+        <button class="form-btn" type="button" onclick="handleAuditSubmit(this)">Request My 10-Minute Audit →</button>
+        <p class="form-note">Confidential &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; Healthcare providers only</p>
       </div>
     </div>
   </div>
@@ -452,8 +609,8 @@
   <img class="cta-bg" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1400&q=60" alt=""/>
   <div class="cta-inner">
     <h2 class="serif">Your expertise is extraordinary.<br>Let the world know.</h2>
-    <p>Schedule a private, no-obligation consultation with the AuraScale strategy team. We'll outline exactly what's holding your practice back — and how to change it.</p>
-    <a class="btn-gold" href="mailto:hello@aurascale.com">Request a 10-Minute Practice Audit</a>
+    <p>Schedule a private, no-obligation consultation with the AuraScale™ strategy team. We'll outline exactly what's holding your practice back — and how to change it.</p>
+    <a class="btn-gold" href="#audit">Request a 10-Minute Practice Audit</a>
     <p class="cta-note">Confidential &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; Healthcare providers only</p>
   </div>
 </section>
@@ -462,12 +619,18 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo serif">Aura<span>Scale</span></div>
+      <div class="footer-logo serif">Aura<span>Scale</span><sup>™</sup></div>
       <div class="footer-tagline">Growth Strategies for Healthcare Leaders<br>Founded by Mousham Ahmed Laskar</div>
+      <div class="footer-msme" style="margin-top:1rem;max-width:240px">
+        <strong>Registered MSME &amp; GST Compliant Entity</strong><br>
+        South 24 Parganas, West Bengal, India
+      </div>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
-      <a href="#services">Lead Generation</a>
+      <a href="#services">Precision Patient Acquisition</a>
+      <a href="#services">Medical Web Infrastructure</a>
+      <a href="#services">Workflow Automation</a>
       <a href="#services">Medical SEO</a>
       <a href="#services">Reputation Management</a>
     </div>
@@ -475,6 +638,7 @@
       <h5>Company</h5>
       <a href="#about">About</a>
       <a href="#process">Our Process</a>
+      <a href="#audit">Free Practice Audit</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="footer-col">
@@ -482,14 +646,16 @@
       <a href="#">HIPAA Policy</a>
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>
+      <a href="#">MSME Certificate</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div style="display: flex; flex-direction: column; gap: 5px;">
-      <p style="margin-bottom: 0;">© 2026 AuraScale. All rights reserved.</p>
-      <p style="font-size: 9.5px; color: rgba(255,255,255,0.25); letter-spacing: 0.03em; margin: 0;">
-        <span style="color: #d4b87a; opacity: 0.9; font-weight: 600;">UDYAM:</span> <span style="color: #ffffff; font-weight: 800; opacity: 1;">WB-18-0186128</span> &nbsp;·&nbsp; 
-        <span style="color: #d4b87a; opacity: 0.9; font-weight: 600;">GSTIN:</span> <span style="color: #ffffff; font-weight: 800; opacity: 1;">19BDYPL9210K1ZR</span>
+    <div style="display:flex;flex-direction:column;gap:5px">
+      <p>© 2026 AuraScale™. All rights reserved.</p>
+      <p style="font-size:9.5px;color:rgba(255,255,255,0.25);letter-spacing:0.03em;margin:0">
+        <span style="color:#d4b87a;opacity:0.9;font-weight:600">UDYAM:</span> <span style="color:#ffffff;font-weight:800;opacity:1">WB-18-0186128</span> &nbsp;·&nbsp;
+        <span style="color:#d4b87a;opacity:0.9;font-weight:600">GSTIN:</span> <span style="color:#ffffff;font-weight:800;opacity:1">19BDYPL9210K1ZR</span> &nbsp;·&nbsp;
+        <span style="color:rgba(255,255,255,0.35)">South 24 Parganas, West Bengal</span>
       </p>
     </div>
     <p>HIPAA-Compliant Operations &nbsp;·&nbsp; Strategic Growth Architecture</p>
@@ -498,8 +664,7 @@
 
 <script>
   function toggleMenu(){
-    var m=document.getElementById('mob');
-    m.classList.toggle('open');
+    document.getElementById('mob').classList.toggle('open');
   }
   function closeMenu(){
     document.getElementById('mob').classList.remove('open');
@@ -510,6 +675,23 @@
       if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
     });
   });
+
+  function handleAuditSubmit(btn){
+    var form = btn.closest('.audit-form');
+    var inputs = form.querySelectorAll('input, select');
+    var valid = true;
+    inputs.forEach(function(i){
+      if(!i.value.trim()){valid=false;i.style.borderColor='rgba(197,100,100,0.6)';}
+      else{i.style.borderColor='';}
+    });
+    if(!valid){return;}
+    btn.textContent = 'Submitting…';
+    btn.style.opacity = '0.7';
+    btn.disabled = true;
+    setTimeout(function(){
+      btn.closest('.audit-form').innerHTML = '<div style="text-align:center;padding:3rem 1rem"><div style="font-family:\'Playfair Display\',serif;font-size:1.5rem;color:var(--white);margin-bottom:1rem">Audit Request Received</div><p style="font-size:13.5px;color:var(--w70);line-height:1.85;font-weight:300">Thank you. A member of the AuraScale™ strategy team will be in touch within one business day to confirm your 10-minute session.</p><div style="margin-top:1.75rem;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-light)">Confidential · No obligation</div></div>';
+    }, 1200);
+  }
 </script>
 </body>
 </html>
