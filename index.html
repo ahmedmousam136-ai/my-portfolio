@@ -601,6 +601,60 @@ html, body { overflow-x:hidden; max-width:100%; }
 @media(max-width:360px) {
   .nav-logo span { display:none; }
 }
+
+/* ===== MSME TRUST BADGE ===== */
+.msme-bar { background:linear-gradient(135deg,#F0FDF4 0%,#ECFDF5 100%); border-top:1px solid #BBF7D0; border-bottom:1px solid #BBF7D0; padding:18px 0; }
+.msme-bar-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap; }
+.msme-badge { display:flex; align-items:center; gap:14px; background:#fff; border:1.5px solid #86EFAC; border-radius:12px; padding:14px 22px; box-shadow:0 2px 12px rgba(22,163,74,.08); }
+.msme-check { width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,#16A34A,#22C55E); display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.1rem; flex-shrink:0; }
+.msme-text { }
+.msme-title { font-family:var(--fd); font-weight:800; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; color:#15803D; }
+.msme-sub { font-size:.72rem; color:#16A34A; font-weight:500; margin-top:1px; }
+.reg-pill { display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--bdr); border-radius:50px; padding:8px 18px; font-size:.78rem; color:var(--muted); font-weight:500; }
+.reg-pill strong { color:var(--text); font-weight:700; }
+.reg-pill-gst { border-color:#BFDBFE; background:#EFF6FF; }
+.reg-pill-gst strong { color:#1D4ED8; }
+.reg-pill-udyam strong { color:#15803D; }
+
+/* ===== BUSINESS INFO SECTION ===== */
+.biz-sec { background:var(--navy-d); padding:56px 0; }
+.biz-inner { display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px; align-items:start; }
+.biz-card { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:var(--r-m); padding:24px; }
+.biz-card-msme { border-color:rgba(34,197,94,.25); background:rgba(34,197,94,.06); }
+.biz-label { font-family:var(--fd); font-size:.66rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:8px; }
+.biz-value { font-family:var(--fm); font-size:.92rem; font-weight:600; color:#fff; margin-bottom:4px; word-break:break-all; }
+.biz-sub { font-size:.78rem; color:rgba(255,255,255,.5); }
+.biz-msme-badge { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.biz-msme-icon { width:32px; height:32px; border-radius:8px; background:linear-gradient(135deg,#16A34A,#22C55E); display:flex; align-items:center; justify-content:center; color:#fff; font-size:.9rem; flex-shrink:0; }
+.biz-msme-title { font-family:var(--fd); font-weight:800; font-size:.82rem; letter-spacing:.1em; text-transform:uppercase; color:#4ADE80; }
+.biz-sec h2 { color:#fff; margin-bottom:8px; }
+.biz-sec > .con > p { color:rgba(255,255,255,.55); margin-bottom:36px; font-size:.9rem; }
+
+/* ===== LOCATION SECTION UPDATES ===== */
+.loc-full-address { font-size:.9rem; color:var(--text); font-weight:600; margin-bottom:4px; }
+.loc-maps-btn { display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:#fff; border-radius:50px; padding:11px 22px; font-family:var(--fd); font-size:.85rem; font-weight:600; margin-top:16px; transition:background .2s,transform .2s; }
+.loc-maps-btn:hover { background:var(--teal); transform:translateY(-1px); }
+
+/* ===== FOOTER REGISTRATION ===== */
+.foot-reg { border-top:1px solid rgba(255,255,255,.08); padding-top:18px; margin-top:10px; display:flex; flex-wrap:wrap; gap:16px; align-items:center; }
+.foot-reg-item { display:flex; align-items:center; gap:6px; font-size:.73rem; color:rgba(255,255,255,.4); }
+.foot-reg-item strong { color:rgba(255,255,255,.6); font-weight:600; }
+.foot-reg-msme { color:rgba(74,222,128,.7); }
+.foot-reg-msme strong { color:#4ADE80; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px) {
+  .msme-bar-inner { gap:16px; justify-content:flex-start; }
+  .msme-badge { width:100%; }
+  .biz-inner { grid-template-columns:1fr; }
+}
+@media(max-width:600px) {
+  .msme-badge { padding:12px 16px; }
+  .msme-title { font-size:.76rem; }
+  .reg-pill { font-size:.72rem; padding:6px 13px; }
+  .biz-sec { padding:40px 0; }
+  .biz-card { padding:18px 14px; }
+}
 </style>
 </head>
 <body>
@@ -742,6 +796,28 @@ html, body { overflow-x:hidden; max-width:100%; }
     </div>
   </div>
 </section>
+
+<!-- MSME TRUST BAR -->
+<div class="msme-bar">
+  <div class="msme-bar-inner">
+    <div class="msme-badge">
+      <div class="msme-check">✓</div>
+      <div class="msme-text">
+        <div class="msme-title">MSME Registered</div>
+        <div class="msme-sub">Government Registered Enterprise</div>
+      </div>
+    </div>
+    <div class="reg-pill reg-pill-udyam">
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" style="color:#15803D"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+      UDYAM:&nbsp;<strong>WB-18-0186128</strong>
+    </div>
+    <div class="reg-pill reg-pill-gst">
+      <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14" style="color:#1D4ED8"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/></svg>
+      GSTIN:&nbsp;<strong>19BDYPL9210K1ZR</strong>
+    </div>
+  </div>
+</div>
+
 
 <!-- PATIENT REGISTRATION -->
 <section class="sec sec-surf" id="registration">
@@ -1149,8 +1225,8 @@ html, body { overflow-x:hidden; max-width:100%; }
           <a href="mailto:ceo@auraskill.in">ceo@auraskill.in</a>
         </div>
         <div class="contact-detail">
-          <svg viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-          <span>South 24 Parganas, West Bengal</span>
+          <svg viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;flex-shrink:0"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          <span>FC 43 + X5R, Kamrajpur, Sonarpur,<br style="display:none"> West Bengal, India</span>
         </div>
         <div class="contact-detail">
           <svg viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px"><path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/></svg>
@@ -1223,18 +1299,66 @@ html, body { overflow-x:hidden; max-width:100%; }
 
 
 <!-- LOCATION SECTION -->
+<!-- BUSINESS INFORMATION SECTION -->
+<section class="biz-sec">
+  <div class="con">
+    <span class="eyebrow reveal" style="color:rgba(74,222,128,.8)">Business Registration</span>
+    <h2 class="reveal">Business Information</h2>
+    <p class="reveal">AuraScale OS is an MSME-registered software enterprise based in West Bengal, India.</p>
+    <div class="biz-inner">
+      <div class="biz-card biz-card-msme reveal">
+        <div class="biz-msme-badge">
+          <div class="biz-msme-icon">✓</div>
+          <div class="biz-msme-title">MSME Registered</div>
+        </div>
+        <div class="biz-label">Registration Type</div>
+        <div class="biz-value" style="font-size:.95rem;font-family:var(--fd)">Government Registered Enterprise</div>
+        <div class="biz-sub" style="margin-top:8px">Registered under the Ministry of Micro, Small &amp; Medium Enterprises, Government of India.</div>
+      </div>
+      <div class="biz-card reveal" style="transition-delay:.07s">
+        <div class="biz-label">UDYAM Registration Number</div>
+        <div class="biz-value">WB-18-0186128</div>
+        <div class="biz-sub">MSME · West Bengal</div>
+        <div style="margin-top:20px">
+          <div class="biz-label">GSTIN</div>
+          <div class="biz-value">19BDYPL9210K1ZR</div>
+          <div class="biz-sub">West Bengal · 19</div>
+        </div>
+      </div>
+      <div class="biz-card reveal" style="transition-delay:.14s">
+        <div class="biz-label">Business Name</div>
+        <div class="biz-value" style="font-size:.95rem;font-family:var(--fd)">AuraScale OS</div>
+        <div style="margin-top:16px">
+          <div class="biz-label">Business Address</div>
+          <div class="biz-value" style="font-size:.82rem;font-family:var(--fb);word-break:normal">FC 43 + X5R, Kamrajpur,</div>
+          <div class="biz-value" style="font-size:.82rem;font-family:var(--fb)">Sonarpur, West Bengal, India</div>
+        </div>
+        <div style="margin-top:16px">
+          <div class="biz-label">Contact</div>
+          <div class="biz-value" style="font-size:.82rem;font-family:var(--fb)">8017465987</div>
+          <div class="biz-value" style="font-size:.78rem;font-family:var(--fb);color:rgba(255,255,255,.55)">ceo@auraskill.in</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sec sec-surf" id="location">
   <div class="con">
     <div class="location-wrap reveal">
       <span class="eyebrow">Our Location</span>
-      <h2 class="sec-title">Find Us</h2>
+      <h2 class="sec-title">Visit AuraScale</h2>
       <div class="loc-card">
         <div class="loc-address">
           <div class="loc-icon">📍</div>
           <div>
             <div class="loc-name">AuraScale OS</div>
-            <div class="loc-line">South 24 Parganas</div>
-            <div class="loc-line">West Bengal, India</div>
+            <div class="loc-full-address">FC 43 + X5R, Kamrajpur,</div>
+            <div class="loc-full-address">Sonarpur, West Bengal, India</div>
+            <div style="margin-top:12px">
+              <div class="loc-line" style="font-size:.8rem;color:var(--muted)">MSME Registered · UDYAM: WB-18-0186128</div>
+              <div class="loc-line" style="font-size:.8rem;color:var(--muted)">GSTIN: 19BDYPL9210K1ZR</div>
+            </div>
             <div class="loc-contacts">
               <a href="tel:8017465987" class="loc-contact-link">
                 <svg viewBox="0 0 20 20" fill="currentColor" width="15" height="15"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
@@ -1244,14 +1368,18 @@ html, body { overflow-x:hidden; max-width:100%; }
                 <svg viewBox="0 0 20 20" fill="currentColor" width="15" height="15"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
                 ceo@auraskill.in
               </a>
+              <a href="https://www.google.com/maps/search/FC+43+X5R+Kamrajpur+Sonarpur+West+Bengal" target="_blank" rel="noopener" class="loc-maps-btn">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="15" height="15"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                Open in Google Maps
+              </a>
             </div>
           </div>
         </div>
         <div class="loc-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471970.95089580694!2d88.0279989!3d22.2154063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89df1b87d6e0d%3A0x2a4f2a3f4a4c9b8a!2sSouth%2024%20Parganas%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
-            width="100%" height="320" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="AuraScale OS Location - South 24 Parganas, West Bengal">
+            src="https://maps.google.com/maps?q=FC+43+X5R+Kamrajpur+Sonarpur+West+Bengal+India&output=embed&z=15"
+            width="100%" height="340" style="border:0;border-radius:14px;display:block;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="AuraScale OS — FC 43 + X5R, Kamrajpur, Sonarpur, West Bengal">
           </iframe>
         </div>
       </div>
@@ -1321,11 +1449,23 @@ html, body { overflow-x:hidden; max-width:100%; }
       </div>
     </div>
     <div class="foot-bot">
-      <div>
+      <div style="flex:1;min-width:0">
         <div class="foot-geo" data-key="footer.geo">Currently focused on South 24 Parganas, West Bengal, with a vision for expansion across West Bengal.</div>
-        <div class="foot-cr" style="margin-top:6px" data-key="footer.copyright">© 2026 AuraScale OS. All rights reserved.</div>
+        <div class="foot-reg" style="margin-top:12px">
+          <div class="foot-reg-item foot-reg-msme">
+            <svg viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.72 6.28l-4 4a1 1 0 01-1.44 0l-2-2a1 1 0 011.44-1.44L7 8.12l3.28-3.28a1 1 0 111.44 1.44z"/></svg>
+            <strong>MSME Registered</strong>
+          </div>
+          <div class="foot-reg-item">UDYAM:&nbsp;<strong>WB-18-0186128</strong></div>
+          <div class="foot-reg-item">GSTIN:&nbsp;<strong>19BDYPL9210K1ZR</strong></div>
+          <div class="foot-reg-item">
+            <svg viewBox="0 0 16 16" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M8 1a5 5 0 100 10A5 5 0 008 1zM3 8a5 5 0 118.485 3.485L3.515 3.515A5 5 0 013 8zm2.343-3.657l7.314 7.314A5 5 0 013.343 4.343z" clip-rule="evenodd"/></svg>
+            FC 43 + X5R, Kamrajpur, Sonarpur, West Bengal
+          </div>
+        </div>
+        <div class="foot-cr" style="margin-top:12px" data-key="footer.copyright">© 2026 AuraScale OS. All rights reserved.</div>
       </div>
-      <div class="foot-bot-r">
+      <div class="foot-bot-r" style="flex-shrink:0">
         <a href="#" data-key="footer.l.priv2">Privacy</a>
         <a href="#" data-key="footer.l.terms2">Terms</a>
         <a href="mailto:ceo@auraskill.in">ceo@auraskill.in</a>
@@ -1461,7 +1601,7 @@ en:{
 "form.success.title":"Request Received","form.success.msg":"Thank you. Your demo request has been received. The AuraScale team will contact you shortly.",
 "form.err.name":"Please enter your full name","form.err.org":"Please enter your organisation name","form.err.phone":"Please enter a valid 10-digit phone number","form.err.email":"Please enter a valid email address","form.err.loc":"Please enter your location","form.err.type":"Please select a facility type",
 "footer.tagline":"Healthcare Management. Simplified.",
-"footer.geo":"Currently focused on South 24 Parganas, West Bengal, with a vision for expansion across West Bengal.",
+"footer.geo":"Currently focused on South 24 Parganas, West Bengal. MSME Registered · UDYAM: WB-18-0186128",
 "footer.copyright":"© 2026 AuraScale OS. All rights reserved.",
 "footer.nav.pages":"Pages","footer.nav.features":"Features","footer.nav.legal":"Legal","footer.nav.lang":"Language",
 "footer.nav.home":"Home","footer.nav.sol":"Solutions","footer.nav.feat":"Features","footer.nav.cov":"Coverage","footer.nav.contact":"Contact",
@@ -1577,7 +1717,7 @@ bn:{
 "form.success.title":"অনুরোধ প্রাপ্ত হয়েছে","form.success.msg":"ধন্যবাদ। আপনার ডেমো অনুরোধ পাওয়া গেছে। AuraScale টিম শীঘ্রই আপনার সাথে যোগাযোগ করবে।",
 "form.err.name":"অনুগ্রহ করে আপনার পূর্ণ নাম লিখুন","form.err.org":"অনুগ্রহ করে আপনার প্রতিষ্ঠানের নাম লিখুন","form.err.phone":"অনুগ্রহ করে একটি বৈধ ১০ সংখ্যার ফোন নম্বর লিখুন","form.err.email":"অনুগ্রহ করে একটি বৈধ ইমেল ঠিকানা লিখুন","form.err.loc":"অনুগ্রহ করে আপনার অবস্থান লিখুন","form.err.type":"অনুগ্রহ করে একটি সুবিধার ধরন নির্বাচন করুন",
 "footer.tagline":"স্বাস্থ্যসেবা ব্যবস্থাপনা। সহজ করা হয়েছে।",
-"footer.geo":"বর্তমানে দক্ষিণ ২৪ পরগনা, পশ্চিমবঙ্গে মনোনিবেশিত, পশ্চিমবঙ্গ জুড়ে সম্প্রসারণের দৃষ্টিভঙ্গি সহ।",
+"footer.geo":"বর্তমানে দক্ষিণ ২৪ পরগনা, পশ্চিমবঙ্গে মনোনিবেশিত। MSME নিবন্ধিত · UDYAM: WB-18-0186128",
 "footer.copyright":"© ২০২৬ AuraScale OS. সর্বস্বত্ব সংরক্ষিত।",
 "footer.nav.pages":"পৃষ্ঠাসমূহ","footer.nav.features":"বৈশিষ্ট্য","footer.nav.legal":"আইনি","footer.nav.lang":"ভাষা",
 "footer.nav.home":"হোম","footer.nav.sol":"সমাধান","footer.nav.feat":"বৈশিষ্ট্য","footer.nav.cov":"কভারেজ","footer.nav.contact":"যোগাযোগ",
@@ -1693,7 +1833,7 @@ hi:{
 "form.success.title":"अनुरोध प्राप्त हुआ","form.success.msg":"धन्यवाद। आपका डेमो अनुरोध प्राप्त हो गया है। AuraScale टीम जल्द ही आपसे संपर्क करेगी।",
 "form.err.name":"कृपया अपना पूरा नाम दर्ज करें","form.err.org":"कृपया अपने संगठन का नाम दर्ज करें","form.err.phone":"कृपया एक वैध 10-अंकीय फ़ोन नंबर दर्ज करें","form.err.email":"कृपया एक वैध ईमेल पता दर्ज करें","form.err.loc":"कृपया अपना स्थान दर्ज करें","form.err.type":"कृपया एक सुविधा प्रकार चुनें",
 "footer.tagline":"स्वास्थ्य प्रबंधन। सरल बनाया।",
-"footer.geo":"वर्तमान में दक्षिण 24 परगना, पश्चिम बंगाल पर केंद्रित, पश्चिम बंगाल में विस्तार के दृष्टिकोण के साथ।",
+"footer.geo":"वर्तमान में दक्षिण 24 परगना, पश्चिम बंगाल पर केंद्रित। MSME पंजीकृत · UDYAM: WB-18-0186128",
 "footer.copyright":"© 2026 AuraScale OS. सर्वाधिकार सुरक्षित।",
 "footer.nav.pages":"पृष्ठ","footer.nav.features":"विशेषताएं","footer.nav.legal":"कानूनी","footer.nav.lang":"भाषा",
 "footer.nav.home":"होम","footer.nav.sol":"समाधान","footer.nav.feat":"विशेषताएं","footer.nav.cov":"कवरेज","footer.nav.contact":"संपर्क",
@@ -1845,3 +1985,5 @@ if (form) {
 }
 
 </script>
+</body>
+</html>
