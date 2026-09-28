@@ -10,15 +10,21 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aurascale.in">
 <meta property="og:site_name" content="AuraScale OS">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AuraScale OS | Healthcare Management System">
 <meta name="twitter:description" content="A complete digital operating system for nursing homes and clinics in West Bengal.">
 <link rel="canonical" href="https://aurascale.in">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:image" content="https://aurascale.in/logo.png">
+<meta name="twitter:image" content="https://aurascale.in/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
+  --logo:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNjQwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjY0MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFCQjg4MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwQTZCNEIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iNjQwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0gMjI3IDEzMyBBIDExOCAxMTggMCAwIDEgNDEzIDEzMyIgc3Ryb2tlLXdpZHRoPSIxNiIgb3BhY2l0eT0iMC4zOCIvPgogICAgPHBhdGggZD0iTSAyNjIgMTU0IEEgNzggNzggMCAwIDEgMzc4IDE1NCIgc3Ryb2tlLXdpZHRoPSIxNiIgb3BhY2l0eT0iMC43Ii8+CiAgPC9nPgogIDxwYXRoIGQ9Ik0gMTk2IDQ1MiBMIDMyMCAyMTQgTCA0NDQgNDUyIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxnIGZpbGw9IiM3Q0U2QkMiPgogICAgPHJlY3QgeD0iMjg0IiB5PSIzNDgiIHdpZHRoPSI3MiIgaGVpZ2h0PSIyNCIgcng9IjEyIi8+CiAgICA8cmVjdCB4PSIzMDgiIHk9IjMyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjcyIiByeD0iMTIiLz4KICA8L2c+Cjwvc3ZnPg==");
   --navy:#1B4F72;--navy-d:#0F2E42;--teal:#00B4A6;--teal-l:#00C9B8;
   --teal-bg:#E8F7F6;--ice:#EFF6FF;--white:#fff;--surf:#F7FAFB;
   --surf2:#EEF4F7;--text:#1A2332;--muted:#5A7A95;--lite:#8BA3B8;
@@ -77,7 +83,7 @@ p{color:var(--muted);line-height:1.72}
 .nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
 .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--fd);font-weight:800;font-size:1.1rem;color:var(--navy)}
-.nav-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--navy),var(--teal));display:flex;align-items:center;justify-content:center;color:#fff;font-size:.95rem;font-weight:800;flex-shrink:0}
+.nav-mark{width:36px;height:36px;border-radius:9px;background:var(--logo) center/cover no-repeat;flex-shrink:0}
 .nav-links{display:flex;align-items:center;gap:28px}
 .nav-links a{font-family:var(--fd);font-size:.86rem;font-weight:500;color:var(--muted);transition:color .2s}
 .nav-links a:hover{color:var(--navy)}
@@ -114,7 +120,7 @@ p{color:var(--muted);line-height:1.72}
 .dash-wrap{background:#fff;border-radius:20px;box-shadow:var(--sh-l),0 0 0 1px var(--bdr);overflow:hidden}
 .d-top{background:var(--navy-d);padding:11px 18px;display:flex;align-items:center;justify-content:space-between}
 .d-top-logo{color:#fff;font-family:var(--fd);font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:7px}
-.d-top-mark{width:22px;height:22px;border-radius:5px;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800}
+.d-top-mark{width:24px;height:24px;border-radius:6px;background:var(--logo) center/cover no-repeat;flex-shrink:0}
 .d-dots{display:flex;gap:5px}
 .d-dots span{width:9px;height:9px;border-radius:50%}
 .d-dots span:nth-child(1){background:#FF5F57}
@@ -357,7 +363,7 @@ p{color:var(--muted);line-height:1.72}
 .footer{background:var(--navy-d);color:#fff;padding:56px 0 30px}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
 .foot-logo{display:flex;align-items:center;gap:9px;margin-bottom:11px;font-family:var(--fd);font-weight:800;font-size:1.05rem}
-.foot-mark{width:30px;height:30px;border-radius:7px;background:linear-gradient(135deg,var(--teal),var(--teal-l));display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;color:#fff}
+.foot-mark{width:34px;height:34px;border-radius:8px;background:var(--logo) center/cover no-repeat;flex-shrink:0}
 .foot-tag{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:14px}
 .foot-c a{display:flex;align-items:center;gap:7px;font-size:.83rem;color:rgba(255,255,255,.55);margin-bottom:8px;transition:color .2s}
 .foot-c a:hover{color:var(--teal)}
@@ -663,7 +669,7 @@ html, body { overflow-x:hidden; max-width:100%; }
 <nav class="nav" id="top">
   <div class="nav-inner">
     <a href="#top" class="nav-logo">
-      <div class="nav-mark">A</div>
+      <div class="nav-mark" role="img" aria-label="AuraScale logo"></div>
       AuraScale OS
     </a>
     <div class="nav-links">
@@ -729,7 +735,7 @@ html, body { overflow-x:hidden; max-width:100%; }
       <div class="dash-wrap">
         <div class="d-top">
           <div class="d-top-logo">
-            <div class="d-top-mark">A</div>
+            <div class="d-top-mark" role="img" aria-label="AuraScale logo"></div>
             AuraScale OS
           </div>
           <div class="d-dots"><span></span><span></span><span></span></div>
@@ -1393,7 +1399,7 @@ html, body { overflow-x:hidden; max-width:100%; }
     <div class="foot-top">
       <div>
         <div class="foot-logo">
-          <div class="foot-mark">A</div>
+          <div class="foot-mark" role="img" aria-label="AuraScale logo"></div>
           AuraScale OS
         </div>
         <div class="foot-tag" data-key="footer.tagline">Healthcare Management. Simplified.</div>
