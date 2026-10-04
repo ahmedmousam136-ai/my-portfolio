@@ -257,6 +257,38 @@ p{color:var(--muted);line-height:1.72}
 
 /* ===== COVERAGE ===== */
 .cov-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:#fff;border:1px solid var(--bdr);border-radius:var(--r-l);padding:30px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--sh-s)}
+.plan-main{border:2px solid var(--teal);box-shadow:var(--sh-m)}
+.plan-dev{background:var(--surf);border:1.5px dashed #B9CCD9;box-shadow:none}
+.plan-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.plan-name{font-family:var(--fd);font-weight:800;font-size:1.25rem;color:var(--navy)}
+.plan-dev .plan-name{color:var(--muted)}
+.plan-price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.plan-amt{font-family:var(--fd);font-weight:800;font-size:2.9rem;line-height:1;color:var(--navy-d);letter-spacing:-1px}
+.plan-per{font-family:var(--fd);font-weight:600;font-size:1rem;color:var(--muted)}
+.plan-gst{font-size:.86rem;color:var(--muted);margin-top:-6px}
+.plan-soon{font-family:var(--fd);font-weight:700;font-size:1.35rem;color:var(--muted);line-height:1.2}
+.plan-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin:4px 0 2px;padding:0}
+.plan-list li{display:flex;gap:10px;font-size:.92rem;color:var(--text)}
+.plan-list li::before{content:"\2713";flex-shrink:0;font-weight:800;color:#007A70}
+.plan-note{background:var(--teal-bg);border:1px solid rgba(0,180,166,.25);border-radius:var(--r-s);padding:12px 14px;font-size:.85rem;color:var(--navy)}
+.plan-desc{font-size:.92rem;flex:1}
+.plan-fine{font-size:.8rem;color:var(--muted)}
+.plan-fine a{color:var(--navy);text-decoration:underline;text-underline-offset:2px}
+.plan-cta{margin-top:auto;width:100%;justify-content:center}
+@media(max-width:1024px){.plan-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+@media(max-width:1180px){.nav-links{gap:18px}}
+@media(max-width:480px){.nav-inner{gap:8px;padding:0 14px}.nav-r{gap:8px}.nav-logo{font-size:.98rem;white-space:nowrap;gap:8px}}
+@media(max-width:370px){.nav-r .lang-sw{display:none}}
+.pol-card{display:flex;flex-direction:column;gap:6px;color:inherit;text-decoration:none}
+.pol-card h3{font-size:1.05rem;color:var(--navy)}
+.pol-card p{font-size:.88rem;flex:1}
+.pol-go{margin-top:10px;font-family:var(--fd);font-weight:600;font-size:.88rem;color:#007A70}
+.pol-card:hover .pol-go{text-decoration:underline}
+@media(max-width:1024px){.pol-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pol-grid{grid-template-columns:1fr}}
 .cov-card{border-radius:var(--r-m);padding:26px;border:1px solid var(--bdr);background:#fff;transition:box-shadow .2s,transform .2s}
 .cov-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px)}
 .cov-icon{font-size:1.9rem;margin-bottom:13px}
@@ -434,6 +466,8 @@ html { scroll-padding-top: 80px; }
 /* ===== MOBILE RESPONSIVENESS FIXES ===== */
 /* Prevent horizontal scroll */
 html, body { overflow-x:hidden; max-width:100%; }
+/* overflow-x:hidden on html/body stops the sticky top menu from sticking; `clip` hides the same sideways overflow without that side effect. */
+@supports (overflow:clip) { html, body { overflow-x:clip; } }
 
 /* Better touch targets */
 .btn { min-height:44px; }
@@ -664,7 +698,9 @@ html, body { overflow-x:hidden; max-width:100%; }
       <a href="#solutions" data-key="nav.solutions">Solutions</a>
       <a href="#features" data-key="nav.features">Features</a>
       <a href="#coverage" data-key="nav.coverage">Coverage</a>
+      <a href="#pricing" data-key="nav.pricing">Pricing</a>
       <a href="#contact" data-key="nav.contact">Contact</a>
+      <a href="#policies" data-key="nav.policies">Policies</a>
     </div>
     <div class="nav-r">
       <div class="lang-sw" role="group" aria-label="Language switcher">
@@ -686,7 +722,9 @@ html, body { overflow-x:hidden; max-width:100%; }
   <a href="#solutions" onclick="closeMenu()" data-key="nav.solutions">Solutions</a>
   <a href="#features" onclick="closeMenu()" data-key="nav.features">Features</a>
   <a href="#coverage" onclick="closeMenu()" data-key="nav.coverage">Coverage</a>
+  <a href="#pricing" onclick="closeMenu()" data-key="nav.pricing">Pricing</a>
   <a href="#contact" onclick="closeMenu()" data-key="nav.contact">Contact</a>
+  <a href="#policies" onclick="closeMenu()" data-key="nav.policies">Policies</a>
   <a href="#contact" onclick="closeMenu()" class="btn btn-p" style="width:fit-content;margin-top:8px" data-key="nav.demo">Request a Demo</a>
   <div class="lang-sw" style="margin-top:12px">
     <button class="lb active" onclick="setLang('en')" id="mlb-en">EN</button>
@@ -1137,6 +1175,47 @@ html, body { overflow-x:hidden; max-width:100%; }
   </div>
 </section>
 
+<!-- PRICING -->
+<section class="sec sec-ice" id="pricing">
+  <div class="con">
+    <span class="eyebrow reveal" data-key="pr2.eyebrow">Pricing</span>
+    <h2 class="sec-title reveal" data-key="pr2.h2">Simple, transparent pricing.</h2>
+    <p class="sec-sub reveal" data-key="pr2.sub">Start with one plan. More plans are in development.</p>
+    <div class="plan-grid">
+
+      <div class="plan plan-main reveal">
+        <div class="plan-top"><span class="plan-name" data-key="pr2.starter">Starter</span><span class="badge badge-g" data-key="pr2.avail">Available now</span></div>
+        <div class="plan-price"><span class="plan-amt">&#8377;4,999</span><span class="plan-per" data-key="pr2.per">/ month</span></div>
+        <div class="plan-gst" data-key="pr2.gst">Inclusive of GST &middot; per facility</div>
+        <ul class="plan-list">
+          <li data-key="pr2.f1">Patient registration, admissions, beds, billing and documents</li>
+          <li data-key="pr2.f2">Owner, receptionist and doctor logins</li>
+          <li data-key="pr2.f3">300 AI-assisted ID-card scans every month</li>
+          <li data-key="pr2.f4">Itemised bills and payment tracking</li>
+        </ul>
+        <div class="plan-note" data-key="pr2.topup">Need more scans? A &#8377;499 top-up pack (inclusive of GST) adds 100 scans and never expires.</div>
+        <a href="#contact" class="btn btn-p plan-cta" data-key="nav.demo">Request a Demo</a>
+        <div class="plan-fine"><span data-key="pr2.fine">Billed monthly in advance.</span> <a href="/refund" data-key="pol.ref.t">Refund &amp; Cancellation</a></div>
+      </div>
+
+      <div class="plan plan-dev reveal" style="transition-delay:.08s">
+        <div class="plan-top"><span class="plan-name" data-key="pr2.growth">Growth</span><span class="badge badge-a" data-key="pr2.dev">In development</span></div>
+        <div class="plan-soon" data-key="pr2.soon">Pricing to be announced</div>
+        <p class="plan-desc" data-key="pr2.growth.d">Our next plan is in development. Features and pricing will be announced here when it is ready.</p>
+        <a href="#contact" class="btn btn-s plan-cta" data-key="pr2.talk">Talk to us</a>
+      </div>
+
+      <div class="plan plan-dev reveal" style="transition-delay:.16s">
+        <div class="plan-top"><span class="plan-name" data-key="pr2.pro">Pro</span><span class="badge badge-a" data-key="pr2.dev">In development</span></div>
+        <div class="plan-soon" data-key="pr2.soon">Pricing to be announced</div>
+        <p class="plan-desc" data-key="pr2.pro.d">A plan for larger facilities and networks is in development. Details will be announced when it is ready.</p>
+        <a href="#contact" class="btn btn-s plan-cta" data-key="pr2.talk">Talk to us</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT / DEMO -->
 <section class="sec" id="contact">
   <div class="con">
@@ -1316,6 +1395,41 @@ html, body { overflow-x:hidden; max-width:100%; }
           </iframe>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- POLICIES -->
+<section class="sec sec-surf" id="policies">
+  <div class="con">
+    <span class="eyebrow reveal" data-key="pol.eyebrow">Transparency</span>
+    <h2 class="sec-title reveal" data-key="pol.h2">Policies &amp; Legal</h2>
+    <p class="sec-sub reveal" data-key="pol.sub">Everything you need to know before you start, in plain language.</p>
+    <div class="pol-grid">
+      <a class="card pol-card reveal" href="/terms">
+        <div class="cicon cicon-t">&#128220;</div>
+        <h3 data-key="pol.terms.t">Terms &amp; Conditions</h3>
+        <p data-key="pol.terms.d">The rules for using AuraScale OS, pricing and what is included.</p>
+        <span class="pol-go" data-key="pol.view">View &rarr;</span>
+      </a>
+      <a class="card pol-card reveal" style="transition-delay:.07s" href="/privacy">
+        <div class="cicon cicon-t">&#128274;</div>
+        <h3 data-key="pol.priv.t">Privacy Policy</h3>
+        <p data-key="pol.priv.d">What information we handle, why, and how it is protected.</p>
+        <span class="pol-go" data-key="pol.view">View &rarr;</span>
+      </a>
+      <a class="card pol-card reveal" style="transition-delay:.14s" href="/refund">
+        <div class="cicon cicon-t">&#128179;</div>
+        <h3 data-key="pol.ref.t">Refund &amp; Cancellation</h3>
+        <p data-key="pol.ref.d">How cancellations, refunds and top-ups work.</p>
+        <span class="pol-go" data-key="pol.view">View &rarr;</span>
+      </a>
+      <a class="card pol-card reveal" style="transition-delay:.21s" href="/contact">
+        <div class="cicon cicon-t">&#9993;</div>
+        <h3 data-key="pol.con.t">Contact Us</h3>
+        <p data-key="pol.con.d">Email, phone, WhatsApp and our Garia address.</p>
+        <span class="pol-go" data-key="pol.view">View &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1539,7 +1653,7 @@ en:{
 "footer.nav.pages":"Pages","footer.nav.features":"Features","footer.nav.legal":"Legal","footer.nav.lang":"Language",
 "footer.nav.home":"Home","footer.nav.sol":"Solutions","footer.nav.feat":"Features","footer.nav.cov":"Coverage","footer.nav.contact":"Contact",
 "footer.f.pr":"Patient Registration","footer.f.bed":"Bed Management","footer.f.bill":"Billing","footer.f.ab":"Ayushman Bharat","footer.f.demo":"Request Demo",
-"footer.l.priv":"Privacy Policy","footer.l.terms":"Terms of Service","footer.l.priv2":"Privacy","footer.l.terms2":"Terms","footer.l.refund":"Refund &amp; Cancellation","footer.l.contact":"Contact Us","footer.l.refund2":"Refund"
+"footer.l.priv":"Privacy Policy","footer.l.terms":"Terms of Service","footer.l.priv2":"Privacy","footer.l.terms2":"Terms","footer.l.refund":"Refund &amp; Cancellation","footer.l.contact":"Contact Us","footer.l.refund2":"Refund","nav.policies":"Policies","pol.eyebrow":"Transparency","pol.h2":"Policies &amp; Legal","pol.sub":"Everything you need to know before you start, in plain language.","pol.terms.t":"Terms &amp; Conditions","pol.terms.d":"The rules for using AuraScale OS, pricing and what is included.","pol.priv.t":"Privacy Policy","pol.priv.d":"What information we handle, why, and how it is protected.","pol.ref.t":"Refund &amp; Cancellation","pol.ref.d":"How cancellations, refunds and top-ups work.","pol.con.t":"Contact Us","pol.con.d":"Email, phone, WhatsApp and our Garia address.","pol.view":"View &rarr;","nav.pricing":"Pricing","pr2.eyebrow":"Pricing","pr2.h2":"Simple, transparent pricing.","pr2.sub":"Start with one plan. More plans are in development.","pr2.starter":"Starter","pr2.growth":"Growth","pr2.pro":"Pro","pr2.avail":"Available now","pr2.dev":"In development","pr2.per":"/ month","pr2.gst":"Inclusive of GST &middot; per facility","pr2.f1":"Patient registration, admissions, beds, billing and documents","pr2.f2":"Owner, receptionist and doctor logins","pr2.f3":"300 AI-assisted ID-card scans every month","pr2.f4":"Itemised bills and payment tracking","pr2.topup":"Need more scans? A &#8377;499 top-up pack (inclusive of GST) adds 100 scans and never expires.","pr2.fine":"Billed monthly in advance.","pr2.soon":"Pricing to be announced","pr2.growth.d":"Our next plan is in development. Features and pricing will be announced here when it is ready.","pr2.pro.d":"A plan for larger facilities and networks is in development. Details will be announced when it is ready.","pr2.talk":"Talk to us"
 },
 
 bn:{
@@ -1652,7 +1766,7 @@ bn:{
 "footer.nav.pages":"পৃষ্ঠাসমূহ","footer.nav.features":"বৈশিষ্ট্য","footer.nav.legal":"আইনি","footer.nav.lang":"ভাষা",
 "footer.nav.home":"হোম","footer.nav.sol":"সমাধান","footer.nav.feat":"বৈশিষ্ট্য","footer.nav.cov":"কভারেজ","footer.nav.contact":"যোগাযোগ",
 "footer.f.pr":"রোগী নিবন্ধন","footer.f.bed":"বেড ব্যবস্থাপনা","footer.f.bill":"বিলিং","footer.f.ab":"আয়ুষ্মান ভারত","footer.f.demo":"ডেমো অনুরোধ",
-"footer.l.priv":"গোপনীয়তা নীতি","footer.l.terms":"সেবার শর্তাবলী","footer.l.priv2":"গোপনীয়তা","footer.l.terms2":"শর্তাবলী","footer.l.refund":"ফেরত ও বাতিলকরণ নীতি","footer.l.contact":"যোগাযোগ করুন","footer.l.refund2":"ফেরত"
+"footer.l.priv":"গোপনীয়তা নীতি","footer.l.terms":"সেবার শর্তাবলী","footer.l.priv2":"গোপনীয়তা","footer.l.terms2":"শর্তাবলী","footer.l.refund":"ফেরত ও বাতিলকরণ নীতি","footer.l.contact":"যোগাযোগ করুন","footer.l.refund2":"ফেরত","nav.policies":"নীতিমালা","pol.eyebrow":"স্বচ্ছতা","pol.h2":"নীতিমালা ও আইনি তথ্য","pol.sub":"শুরু করার আগে যা জানা দরকার, সহজ ভাষায়।","pol.terms.t":"শর্তাবলী","pol.terms.d":"AuraScale OS ব্যবহারের নিয়ম, মূল্য এবং কী অন্তর্ভুক্ত।","pol.priv.t":"গোপনীয়তা নীতি","pol.priv.d":"আমরা কী তথ্য সামলাই, কেন, এবং কীভাবে তা সুরক্ষিত।","pol.ref.t":"ফেরত ও বাতিলকরণ","pol.ref.d":"বাতিল, ফেরত এবং টপ-আপ কীভাবে কাজ করে।","pol.con.t":"যোগাযোগ করুন","pol.con.d":"ইমেল, ফোন, হোয়াটসঅ্যাপ এবং গড়িয়ার ঠিকানা।","pol.view":"দেখুন &rarr;","nav.pricing":"মূল্য","pr2.eyebrow":"মূল্য","pr2.h2":"সহজ ও স্বচ্ছ মূল্য।","pr2.sub":"একটি প্ল্যান দিয়ে শুরু করুন। আরও প্ল্যান তৈরি হচ্ছে।","pr2.starter":"স্টার্টার","pr2.growth":"গ্রোথ","pr2.pro":"প্রো","pr2.avail":"এখন পাওয়া যাচ্ছে","pr2.dev":"তৈরি হচ্ছে","pr2.per":"/ মাস","pr2.gst":"জিএসটি সহ &middot; প্রতি প্রতিষ্ঠান","pr2.f1":"রোগী নিবন্ধন, ভর্তি, বেড, বিলিং ও নথি","pr2.f2":"মালিক, রিসেপশনিস্ট ও ডাক্তারের লগইন","pr2.f3":"প্রতি মাসে ৩০০টি এআই-সহায়ক আইডি কার্ড স্ক্যান","pr2.f4":"আইটেমযুক্ত বিল ও পেমেন্ট ট্র্যাকিং","pr2.topup":"আরও স্ক্যান লাগবে? &#8377;৪৯৯ টপ-আপ প্যাকে (জিএসটি সহ) ১০০টি স্ক্যান যোগ হয়, মেয়াদ শেষ হয় না।","pr2.fine":"প্রতি মাসে অগ্রিম বিল।","pr2.soon":"মূল্য শীঘ্রই জানানো হবে","pr2.growth.d":"আমাদের পরবর্তী প্ল্যান তৈরি হচ্ছে। প্রস্তুত হলে বৈশিষ্ট্য ও মূল্য এখানে জানানো হবে।","pr2.pro.d":"বড় প্রতিষ্ঠান ও নেটওয়ার্কের জন্য একটি প্ল্যান তৈরি হচ্ছে। প্রস্তুত হলে বিবরণ জানানো হবে।","pr2.talk":"আমাদের সাথে কথা বলুন"
 },
 
 hi:{
@@ -1765,7 +1879,7 @@ hi:{
 "footer.nav.pages":"पृष्ठ","footer.nav.features":"विशेषताएं","footer.nav.legal":"कानूनी","footer.nav.lang":"भाषा",
 "footer.nav.home":"होम","footer.nav.sol":"समाधान","footer.nav.feat":"विशेषताएं","footer.nav.cov":"कवरेज","footer.nav.contact":"संपर्क",
 "footer.f.pr":"रोगी पंजीकरण","footer.f.bed":"बेड प्रबंधन","footer.f.bill":"बिलिंग","footer.f.ab":"आयुष्मान भारत","footer.f.demo":"डेमो अनुरोध",
-"footer.l.priv":"गोपनीयता नीति","footer.l.terms":"सेवा की शर्तें","footer.l.priv2":"गोपनीयता","footer.l.terms2":"शर्तें","footer.l.refund":"रिफंड और रद्दीकरण नीति","footer.l.contact":"संपर्क करें","footer.l.refund2":"रिफंड"
+"footer.l.priv":"गोपनीयता नीति","footer.l.terms":"सेवा की शर्तें","footer.l.priv2":"गोपनीयता","footer.l.terms2":"शर्तें","footer.l.refund":"रिफंड और रद्दीकरण नीति","footer.l.contact":"संपर्क करें","footer.l.refund2":"रिफंड","nav.policies":"नीतियां","pol.eyebrow":"पारदर्शिता","pol.h2":"नीतियां और कानूनी जानकारी","pol.sub":"शुरू करने से पहले जो कुछ जानना ज़रूरी है, सरल भाषा में।","pol.terms.t":"नियम और शर्तें","pol.terms.d":"AuraScale OS उपयोग के नियम, मूल्य और क्या शामिल है।","pol.priv.t":"गोपनीयता नीति","pol.priv.d":"हम कौन सी जानकारी संभालते हैं, क्यों, और उसे कैसे सुरक्षित रखते हैं।","pol.ref.t":"रिफंड और रद्दीकरण","pol.ref.d":"रद्दीकरण, रिफंड और टॉप-अप कैसे काम करते हैं।","pol.con.t":"संपर्क करें","pol.con.d":"ईमेल, फोन, व्हाट्सऐप और गड़िया का पता।","pol.view":"देखें &rarr;","nav.pricing":"मूल्य","pr2.eyebrow":"मूल्य","pr2.h2":"सरल और पारदर्शी मूल्य।","pr2.sub":"एक प्लान से शुरू करें। और प्लान विकास में हैं।","pr2.starter":"स्टार्टर","pr2.growth":"ग्रोथ","pr2.pro":"प्रो","pr2.avail":"अभी उपलब्ध","pr2.dev":"विकास में","pr2.per":"/ माह","pr2.gst":"जीएसटी सहित &middot; प्रति सुविधा","pr2.f1":"रोगी पंजीकरण, प्रवेश, बेड, बिलिंग और दस्तावेज़","pr2.f2":"मालिक, रिसेप्शनिस्ट और डॉक्टर के लॉगिन","pr2.f3":"हर महीने 300 एआई-सहायता प्राप्त आईडी कार्ड स्कैन","pr2.f4":"आइटमवार बिल और भुगतान ट्रैकिंग","pr2.topup":"और स्कैन चाहिए? &#8377;499 का टॉप-अप पैक (जीएसटी सहित) 100 स्कैन जोड़ता है और कभी समाप्त नहीं होता।","pr2.fine":"हर महीने अग्रिम बिल।","pr2.soon":"मूल्य की घोषणा जल्द होगी","pr2.growth.d":"हमारा अगला प्लान विकास में है। तैयार होने पर सुविधाएं और मूल्य यहां घोषित किए जाएंगे।","pr2.pro.d":"बड़ी सुविधाओं और नेटवर्क के लिए एक प्लान विकास में है। तैयार होने पर विवरण घोषित किए जाएंगे।","pr2.talk":"हमसे बात करें"
 }
 };
 
