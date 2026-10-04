@@ -256,7 +256,7 @@ p{color:var(--muted);line-height:1.72}
 .ab-item-text{font-size:.82rem;color:rgba(255,255,255,.65)}
 
 /* ===== COVERAGE ===== */
-.cov-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.cov-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .cov-card{border-radius:var(--r-m);padding:26px;border:1px solid var(--bdr);background:#fff;transition:box-shadow .2s,transform .2s}
 .cov-card:hover{box-shadow:var(--sh-m);transform:translateY(-2px)}
 .cov-icon{font-size:1.9rem;margin-bottom:13px}
@@ -264,21 +264,7 @@ p{color:var(--muted);line-height:1.72}
 .cov-card p{font-size:.83rem}
 .cov-gov{border-top:3px solid #16A34A}
 .cov-ins{border-top:3px solid #0369A1}
-.cov-fin{border-top:3px solid #7C3AED}
 .cov-self{border-top:3px solid var(--teal)}
-
-/* ===== FINANCING ===== */
-.fin-flow{display:flex;flex-direction:column;gap:0}
-.fin-step{display:flex;gap:0;align-items:flex-start}
-.fin-left{display:flex;flex-direction:column;align-items:center;margin-right:16px}
-.fin-ico{width:40px;height:40px;border-radius:50%;background:var(--teal-bg);border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;z-index:1}
-.fin-line{width:2px;flex:1;background:var(--bdr);min-height:28px}
-.fin-step:last-child .fin-line{display:none}
-.fin-body{padding-bottom:24px;padding-top:8px}
-.fin-step:last-child .fin-body{padding-bottom:0}
-.fin-t{font-family:var(--fd);font-weight:600;font-size:.95rem;color:var(--text)}
-.fin-s{font-size:.8rem;color:var(--muted);margin-top:2px}
-.fin-disc{background:var(--teal-bg);border:1px solid rgba(0,180,166,.25);border-radius:var(--r-s);padding:14px 18px;font-size:.83rem;color:var(--navy);font-weight:500;margin-top:24px}
 
 /* ===== VALUE PROPS ===== */
 .vp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -299,8 +285,7 @@ p{color:var(--muted);line-height:1.72}
 .pr-desc{font-size:.73rem}
 .pr-gov{border-color:#BBF7D0;background:#F0FDF4;color:#166534}
 .pr-ins{border-color:#BAE6FD;background:#F0F9FF;color:#0369A1}
-.pr-fin{border-color:#DDD6FE;background:#F5F3FF;color:#5B21B6}
-.pr-self{border-color:#FED7AA;background:#FFF7ED;color:#C2410C}
+.pr-self{border-color:#FED7AA;background:#FFF7ED;color:#C2410C;grid-column:1/-1}
 .pay-note{font-size:.78rem;color:var(--muted);text-align:center;padding-top:10px;border-top:1px solid var(--bdr)}
 
 /* ===== CLINIC ===== */
@@ -389,6 +374,7 @@ p{color:var(--muted);line-height:1.72}
   .hero-dash{max-width:580px;margin:0 auto}
   @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
   .feat-grid,.cov-cards{grid-template-columns:repeat(2,1fr)}
+.cov-cards .cov-self{grid-column:1/-1}
   .roles-grid,.vp-grid{grid-template-columns:1fr}
   .foot-top{grid-template-columns:1fr 1fr;gap:32px}
   .split,.contact-grid{grid-template-columns:1fr;gap:40px}
@@ -590,6 +576,7 @@ html, body { overflow-x:hidden; max-width:100%; }
 @media(min-width:601px) and (max-width:1024px) {
   .feat-grid { grid-template-columns:repeat(2,1fr); }
   .cov-cards { grid-template-columns:repeat(2,1fr); }
+.cov-cards .cov-self { grid-column:1/-1; }
   .roles-grid { grid-template-columns:1fr; }
   .vp-grid { grid-template-columns:repeat(2,1fr); }
   .loc-card { grid-template-columns:1fr; }
@@ -954,7 +941,6 @@ html, body { overflow-x:hidden; max-width:100%; }
           <li data-key="r.doc.3">Review medical reports & records</li>
           <li data-key="r.doc.4">Add prescriptions & clinical notes</li>
           <li data-key="r.doc.5">Update treatment progress</li>
-          <li data-key="r.doc.6">Voice-assisted notes where enabled</li>
           <li data-key="r.doc.7">Discharge summaries & recommendations</li>
         </ul>
       </div>
@@ -988,7 +974,7 @@ html, body { overflow-x:hidden; max-width:100%; }
       <div class="wf-step accent reveal" style="transition-delay:.1s"><div class="wf-num">03</div><div><div class="wf-title" data-key="step.3">Assign Bed &amp; Doctor</div><div class="wf-desc" data-key="step.3d">Allocate the right bed type and assign a doctor from your panel based on availability.</div></div></div>
       <div class="wf-step reveal" style="transition-delay:.15s"><div class="wf-num">04</div><div><div class="wf-title" data-key="step.4">Manage Treatment &amp; Documents</div><div class="wf-desc" data-key="step.4d">Doctors update notes, prescriptions and reports. Documents are stored against the patient's record.</div></div></div>
       <div class="wf-step reveal" style="transition-delay:.2s"><div class="wf-num">05</div><div><div class="wf-title" data-key="step.5">Generate Bill</div><div class="wf-desc" data-key="step.5d">Create an itemised bill covering room, doctor, procedures, medicines and all applicable charges.</div></div></div>
-      <div class="wf-step accent reveal" style="transition-delay:.25s"><div class="wf-num">06</div><div><div class="wf-title" data-key="step.6">Explore Coverage / Payment Route</div><div class="wf-desc" data-key="step.6d">Review applicable government scheme, insurance, financing or self-pay options for the patient.</div></div></div>
+      <div class="wf-step accent reveal" style="transition-delay:.25s"><div class="wf-num">06</div><div><div class="wf-title" data-key="step.6">Explore Coverage / Payment Route</div><div class="wf-desc" data-key="step.6d">Review applicable government scheme, insurance or self-pay options for the patient.</div></div></div>
       <div class="wf-step reveal" style="transition-delay:.3s"><div class="wf-num">07</div><div><div class="wf-title" data-key="step.7">Complete Payment / Settlement</div><div class="wf-desc" data-key="step.7d">Process payment through the selected route and mark the billing record accordingly.</div></div></div>
       <div class="wf-step reveal" style="transition-delay:.35s"><div class="wf-num">08</div><div><div class="wf-title" data-key="step.8">Discharge &amp; Maintain Record</div><div class="wf-desc" data-key="step.8d">Issue discharge summary, update bed status and preserve the complete digital record.</div></div></div>
     </div>
@@ -1049,68 +1035,10 @@ html, body { overflow-x:hidden; max-width:100%; }
         <h3 data-key="cov.ins">Insurance / TPA</h3>
         <p data-key="cov.ins.d">Designed to support insurer and TPA workflows subject to authorised integrations and applicable requirements being met.</p>
       </div>
-      <div class="cov-card cov-fin reveal" style="transition-delay:.14s">
-        <div class="cov-icon">💼</div>
-        <h3 data-key="cov.fin">Healthcare Financing</h3>
-        <p data-key="cov.fin.d">Where authorised financing options are available, eligible patients may be able to access healthcare financing through participating providers.</p>
-      </div>
       <div class="cov-card cov-self reveal" style="transition-delay:.21s">
         <div class="cov-icon">💵</div>
         <h3 data-key="cov.self">Self Pay</h3>
         <p data-key="cov.self.d">Full self-pay billing with clear itemised invoices, payment receipts and outstanding balance tracking for the patient and facility.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FINANCING -->
-<section class="sec">
-  <div class="con">
-    <div class="split">
-      <div class="reveal">
-        <span class="eyebrow" data-key="fin.eyebrow">Healthcare Financing</span>
-        <h2 class="sec-title" data-key="fin.h2">Give Eligible Patients More Ways to Pay.</h2>
-        <p style="margin-bottom:28px" data-key="fin.sub">Where authorised financing options are available, eligible patients may be able to use healthcare financing to manage treatment expenses through participating financing providers.</p>
-        <div class="fin-flow">
-          <div class="fin-step">
-            <div class="fin-left"><div class="fin-ico">🧾</div><div class="fin-line"></div></div>
-            <div class="fin-body"><div class="fin-t" data-key="fin.s1">Treatment Bill Generated</div><div class="fin-s" data-key="fin.s1d">AuraScale generates the complete itemised bill for the admission.</div></div>
-          </div>
-          <div class="fin-step">
-            <div class="fin-left"><div class="fin-ico">✅</div><div class="fin-line"></div></div>
-            <div class="fin-body"><div class="fin-t" data-key="fin.s2">Eligibility Check</div><div class="fin-s" data-key="fin.s2d">Patient is checked for applicable financing options based on provider criteria.</div></div>
-          </div>
-          <div class="fin-step">
-            <div class="fin-left"><div class="fin-ico">📋</div><div class="fin-line"></div></div>
-            <div class="fin-body"><div class="fin-t" data-key="fin.s3">Financing Option Presented</div><div class="fin-s" data-key="fin.s3d">If eligible, the patient is presented with available financing options and terms from participating providers.</div></div>
-          </div>
-          <div class="fin-step">
-            <div class="fin-left"><div class="fin-ico">💳</div><div class="fin-line"></div></div>
-            <div class="fin-body"><div class="fin-t" data-key="fin.s4">Patient Pays per Financing Terms</div><div class="fin-s" data-key="fin.s4d">Payment schedule and terms are determined by the respective financing provider.</div></div>
-          </div>
-          <div class="fin-step">
-            <div class="fin-left"><div class="fin-ico">🏥</div><div class="fin-line"></div></div>
-            <div class="fin-body"><div class="fin-t" data-key="fin.s5">Facility Receives Payment</div><div class="fin-s" data-key="fin.s5d">Settlement to the healthcare facility occurs according to the provider agreement and process.</div></div>
-          </div>
-        </div>
-        <div class="fin-disc" data-key="fin.disclaimer">Financing options are subject to participating provider availability, eligibility criteria and applicable agreements. Terms, interest rates and approval are determined by the respective financing provider.</div>
-      </div>
-      <div class="reveal" style="transition-delay:.1s">
-        <div class="card" style="margin-bottom:16px">
-          <div class="cicon cicon-t">💡</div>
-          <h3 data-key="fin.why.title">Why This Matters</h3>
-          <p data-key="fin.why.desc">Large treatment bills can be difficult to manage in one payment. Where financing is available and a patient is eligible, it may help them access treatment more comfortably.</p>
-        </div>
-        <div class="card" style="margin-bottom:16px">
-          <div class="cicon cicon-n">⚠️</div>
-          <h3 data-key="fin.note.title">Important to Know</h3>
-          <p data-key="fin.note.desc">AuraScale does not guarantee financing approval, interest rates, or settlement amounts. All financing terms are set by the respective provider. Eligibility is determined by the financing provider, not AuraScale.</p>
-        </div>
-        <div class="card">
-          <div class="cicon cicon-t">🤝</div>
-          <h3 data-key="fin.part.title">Participating Providers</h3>
-          <p data-key="fin.part.desc">Financing is available through participating providers where applicable agreements are in place. Provider details will be communicated where available.</p>
-        </div>
       </div>
     </div>
   </div>
@@ -1126,7 +1054,7 @@ html, body { overflow-x:hidden; max-width:100%; }
       <div class="vp-card reveal"><div class="vp-num">01</div><div class="vp-icon">🔗</div><h3 data-key="vp.1.t">One Connected System</h3><p data-key="vp.1.d">Patient, admission, bed, doctor and billing workflows — all in one platform. No separate tools to manage or reconcile.</p></div>
       <div class="vp-card reveal" style="transition-delay:.07s"><div class="vp-num">02</div><div class="vp-icon">⚡</div><h3 data-key="vp.2.t">Faster Administration</h3><p data-key="vp.2.d">Reduce repetitive manual work at the front desk. Patient registration, billing and document management done faster.</p></div>
       <div class="vp-card reveal" style="transition-delay:.14s"><div class="vp-num">03</div><div class="vp-icon">👁️</div><h3 data-key="vp.3.t">Better Visibility</h3><p data-key="vp.3.d">Owners can monitor beds, admissions, billing and operational activity from one real-time overview.</p></div>
-      <div class="vp-card reveal"><div class="vp-num">04</div><div class="vp-icon">💼</div><h3 data-key="vp.4.t">Flexible Payment Workflows</h3><p data-key="vp.4.d">Help eligible patients access applicable coverage and financing pathways — from government schemes to self-pay.</p></div>
+      <div class="vp-card reveal"><div class="vp-num">04</div><div class="vp-icon">💼</div><h3 data-key="vp.4.t">Flexible Payment Workflows</h3><p data-key="vp.4.d">Help eligible patients access applicable coverage pathways — from government schemes to self-pay.</p></div>
       <div class="vp-card reveal" style="transition-delay:.07s"><div class="vp-num">05</div><div class="vp-icon">📈</div><h3 data-key="vp.5.t">Scalable Infrastructure</h3><p data-key="vp.5.d">Designed to grow from individual nursing homes and clinics toward larger healthcare networks across West Bengal.</p></div>
       <div class="vp-card reveal" style="transition-delay:.14s;background:linear-gradient(135deg,var(--navy-d),#1a3a5c);border-color:var(--navy)">
         <div class="vp-num" style="color:rgba(255,255,255,.06)">→</div>
@@ -1147,8 +1075,8 @@ html, body { overflow-x:hidden; max-width:100%; }
         <span class="eyebrow" data-key="pay.eyebrow">Payment Routes</span>
         <h2 class="sec-title" data-key="pay.h2">A Treatment Bill. Multiple Payment Routes.</h2>
         <p style="margin-bottom:16px" data-key="pay.sub">AuraScale OS helps healthcare facilities understand and access different payment pathways for each patient's situation.</p>
-        <p style="margin-bottom:16px;font-size:.9rem" data-key="pay.note1">Patients may be eligible for one or more of the payment routes below, depending on their situation, the applicable government rules, insurance policy, and financing provider eligibility.</p>
-        <p style="font-size:.85rem;color:var(--lite)" data-key="pay.note2">AuraScale does not determine patient eligibility for government schemes, insurance or financing. These are determined by the respective scheme, insurer or financing provider.</p>
+        <p style="margin-bottom:16px;font-size:.9rem" data-key="pay.note1">Patients may be eligible for one or more of the payment routes below, depending on their situation, the applicable government rules and their insurance policy.</p>
+        <p style="font-size:.85rem;color:var(--lite)" data-key="pay.note2">AuraScale does not determine patient eligibility for government schemes or insurance. These are determined by the respective scheme or insurer.</p>
       </div>
       <div class="reveal" style="transition-delay:.1s">
         <div class="pay-card">
@@ -1159,10 +1087,9 @@ html, body { overflow-x:hidden; max-width:100%; }
           <div class="pay-routes">
             <div class="pr pr-gov"><div class="pr-lbl" data-key="pr.gov">Government Scheme</div><div class="pr-desc" data-key="pr.gov.d">If eligible under applicable scheme (e.g. Ayushman Bharat)</div></div>
             <div class="pr pr-ins"><div class="pr-lbl" data-key="pr.ins">Insurance / TPA</div><div class="pr-desc" data-key="pr.ins.d">If the patient holds an applicable insurance policy</div></div>
-            <div class="pr pr-fin"><div class="pr-lbl" data-key="pr.fin">Healthcare Financing</div><div class="pr-desc" data-key="pr.fin.d">If eligible, via participating financing provider</div></div>
             <div class="pr pr-self"><div class="pr-lbl" data-key="pr.self">Self Pay</div><div class="pr-desc" data-key="pr.self.d">Direct payment by patient or family</div></div>
           </div>
-          <div class="pay-note" data-key="pay.card.note">Routes shown are illustrative. Actual eligibility is determined by the respective scheme, insurer or financing provider. Routes may be combined where applicable.</div>
+          <div class="pay-note" data-key="pay.card.note">Routes shown are illustrative. Actual eligibility is determined by the respective scheme or insurer. Routes may be combined where applicable.</div>
         </div>
       </div>
     </div>
@@ -1538,7 +1465,7 @@ en:{
 "roles.doc.label":"Doctor","roles.doc.h":"Clinical Workflow",
 "roles.own.label":"Owner / Management","roles.own.h":"Operational Overview",
 "r.rec.1":"Patient registration & ID capture","r.rec.2":"AI-assisted data entry & verification","r.rec.3":"Admission creation & bed assignment","r.rec.4":"Patient search & record access","r.rec.5":"Billing workflow management","r.rec.6":"Document upload & management","r.rec.7":"Payment & coverage workflow",
-"r.doc.1":"View assigned patients & admissions","r.doc.2":"Access patient information & history","r.doc.3":"Review medical reports & records","r.doc.4":"Add prescriptions & clinical notes","r.doc.5":"Update treatment progress","r.doc.6":"Voice-assisted notes where enabled","r.doc.7":"Discharge summaries & recommendations",
+"r.doc.1":"View assigned patients & admissions","r.doc.2":"Access patient information & history","r.doc.3":"Review medical reports & records","r.doc.4":"Add prescriptions & clinical notes","r.doc.5":"Update treatment progress","r.doc.7":"Discharge summaries & recommendations",
 "r.own.1":"Real-time bed occupancy view","r.own.2":"Admission & discharge monitoring","r.own.3":"Revenue & billing overview","r.own.4":"Outstanding payment tracking","r.own.5":"Patient statistics & trends","r.own.6":"Doctor & staff activity overview","r.own.7":"Operational analytics & facility overview",
 "workflow.eyebrow":"How It Works","workflow.h2":"The Complete Facility Workflow. In Eight Steps.",
 "workflow.sub":"AuraScale OS connects every stage of the patient journey — from the first visit to the final discharge — in one platform.",
@@ -1547,7 +1474,7 @@ en:{
 "step.3":"Assign Bed & Doctor","step.3d":"Allocate the right bed type and assign a doctor from your panel based on availability.",
 "step.4":"Manage Treatment & Documents","step.4d":"Doctors update notes, prescriptions and reports. Documents are stored against the patient's record.",
 "step.5":"Generate Bill","step.5d":"Create an itemised bill covering room, doctor, procedures, medicines and all applicable charges.",
-"step.6":"Explore Coverage / Payment Route","step.6d":"Review applicable government scheme, insurance, financing or self-pay options for the patient.",
+"step.6":"Explore Coverage / Payment Route","step.6d":"Review applicable government scheme, insurance or self-pay options for the patient.",
 "step.7":"Complete Payment / Settlement","step.7d":"Process payment through the selected route and mark the billing record accordingly.",
 "step.8":"Discharge & Maintain Record","step.8d":"Issue discharge summary, update bed status and preserve the complete digital record.",
 "ab.eyebrow":"Moving Toward Connected Healthcare Coverage","ab.h2":"Ayushman Bharat Integration in Progress.",
@@ -1562,37 +1489,34 @@ en:{
 "cov.sub":"AuraScale is being designed to help healthcare facilities manage different payment and coverage pathways from one workflow.",
 "cov.gov":"Government Schemes","cov.gov.d":"AuraScale is moving toward authorised digital integrations where official access is available. Ayushman Bharat integration is currently in progress.",
 "cov.ins":"Insurance / TPA","cov.ins.d":"Designed to support insurer and TPA workflows subject to authorised integrations and applicable requirements being met.",
-"cov.fin":"Healthcare Financing","cov.fin.d":"Where authorised financing options are available, eligible patients may be able to access healthcare financing through participating providers.",
 "cov.self":"Self Pay","cov.self.d":"Full self-pay billing with clear itemised invoices, payment receipts and outstanding balance tracking for the patient and facility.",
-"fin.eyebrow":"Healthcare Financing","fin.h2":"Give Eligible Patients More Ways to Pay.",
-"fin.sub":"Where authorised financing options are available, eligible patients may be able to use healthcare financing to manage treatment expenses through participating financing providers.",
-"fin.s1":"Treatment Bill Generated","fin.s1d":"AuraScale generates the complete itemised bill for the admission.",
-"fin.s2":"Eligibility Check","fin.s2d":"Patient is checked for applicable financing options based on provider criteria.",
-"fin.s3":"Financing Option Presented","fin.s3d":"If eligible, the patient is presented with available financing options and terms from participating providers.",
-"fin.s4":"Patient Pays per Financing Terms","fin.s4d":"Payment schedule and terms are determined by the respective financing provider.",
-"fin.s5":"Facility Receives Payment","fin.s5d":"Settlement to the healthcare facility occurs according to the provider agreement and process.",
-"fin.disclaimer":"Financing options are subject to participating provider availability, eligibility criteria and applicable agreements. Terms, interest rates and approval are determined by the respective financing provider.",
-"fin.why.title":"Why This Matters","fin.why.desc":"Large treatment bills can be difficult to manage in one payment. Where financing is available and a patient is eligible, it may help them access treatment more comfortably.",
-"fin.note.title":"Important to Know","fin.note.desc":"AuraScale does not guarantee financing approval, interest rates, or settlement amounts. All financing terms are set by the respective provider. Eligibility is determined by the financing provider, not AuraScale.",
-"fin.part.title":"Participating Providers","fin.part.desc":"Financing is available through participating providers where applicable agreements are in place. Provider details will be communicated where available.",
+
+
+
+
+
+
+
+
+
+
 "vp.eyebrow":"Why Choose AuraScale OS","vp.h2":"Why Nursing Homes Can Benefit From AuraScale OS",
 "vp.sub":"AuraScale OS is designed from the ground up for the way nursing homes and clinics actually work.",
 "vp.1.t":"One Connected System","vp.1.d":"Patient, admission, bed, doctor and billing workflows — all in one platform. No separate tools to manage or reconcile.",
 "vp.2.t":"Faster Administration","vp.2.d":"Reduce repetitive manual work at the front desk. Patient registration, billing and document management done faster.",
 "vp.3.t":"Better Visibility","vp.3.d":"Owners can monitor beds, admissions, billing and operational activity from one real-time overview.",
-"vp.4.t":"Flexible Payment Workflows","vp.4.d":"Help eligible patients access applicable coverage and financing pathways — from government schemes to self-pay.",
+"vp.4.t":"Flexible Payment Workflows","vp.4.d":"Help eligible patients access applicable coverage pathways — from government schemes to self-pay.",
 "vp.5.t":"Scalable Infrastructure","vp.5.d":"Designed to grow from individual nursing homes and clinics toward larger healthcare networks across West Bengal.",
 "vp.cta.t":"Ready to See It in Action?","vp.cta.d":"Book a demo and see how AuraScale OS can work for your facility.","vp.cta.btn":"Request a Demo",
 "pay.eyebrow":"Payment Routes","pay.h2":"A Treatment Bill. Multiple Payment Routes.",
 "pay.sub":"AuraScale OS helps healthcare facilities understand and access different payment pathways for each patient's situation.",
-"pay.note1":"Patients may be eligible for one or more of the payment routes below, depending on their situation, the applicable government rules, insurance policy, and financing provider eligibility.",
-"pay.note2":"AuraScale does not determine patient eligibility for government schemes, insurance or financing. These are determined by the respective scheme, insurer or financing provider.",
+"pay.note1":"Patients may be eligible for one or more of the payment routes below, depending on their situation, the applicable government rules and their insurance policy.",
+"pay.note2":"AuraScale does not determine patient eligibility for government schemes or insurance. These are determined by the respective scheme or insurer.",
 "pay.card.label":"Treatment Bill (Demo)","pay.card.badge":"Example Only",
 "pr.gov":"Government Scheme","pr.gov.d":"If eligible under applicable scheme (e.g. Ayushman Bharat)",
 "pr.ins":"Insurance / TPA","pr.ins.d":"If the patient holds an applicable insurance policy",
-"pr.fin":"Healthcare Financing","pr.fin.d":"If eligible, via participating financing provider",
 "pr.self":"Self Pay","pr.self.d":"Direct payment by patient or family",
-"pay.card.note":"Routes shown are illustrative. Actual eligibility is determined by the respective scheme, insurer or financing provider. Routes may be combined where applicable.",
+"pay.card.note":"Routes shown are illustrative. Actual eligibility is determined by the respective scheme or insurer. Routes may be combined where applicable.",
 "clinic.eyebrow":"For Clinics Too","clinic.h2":"Not Just for Nursing Homes.",
 "clinic.sub":"Simple, connected digital management for clinics and polyclinics — the same quality platform, scaled to your facility size.",
 "cf.1":"Patient Registration","cf.2":"Appointments","cf.3":"Patient History","cf.4":"Doctor Management","cf.5":"Prescriptions","cf.6":"Medical Documents","cf.7":"Billing","cf.8":"Follow-ups","cf.9":"Analytics",
@@ -1654,7 +1578,7 @@ bn:{
 "roles.doc.label":"ডাক্তার","roles.doc.h":"ক্লিনিকাল ওয়ার্কফ্লো",
 "roles.own.label":"মালিক / ম্যানেজমেন্ট","roles.own.h":"অপারেশনাল ওভারভিউ",
 "r.rec.1":"রোগী নিবন্ধন ও পরিচয় ক্যাপচার","r.rec.2":"AI-সহায়তা ডেটা এন্ট্রি ও যাচাইকরণ","r.rec.3":"ভর্তি তৈরি ও বেড বরাদ্দ","r.rec.4":"রোগী অনুসন্ধান ও রেকর্ড অ্যাক্সেস","r.rec.5":"বিলিং ওয়ার্কফ্লো ব্যবস্থাপনা","r.rec.6":"নথি আপলোড ও ব্যবস্থাপনা","r.rec.7":"পেমেন্ট ও কভারেজ ওয়ার্কফ্লো",
-"r.doc.1":"নির্ধারিত রোগী ও ভর্তি দেখুন","r.doc.2":"রোগীর তথ্য ও ইতিহাস অ্যাক্সেস করুন","r.doc.3":"চিকিৎসা রিপোর্ট ও রেকর্ড পর্যালোচনা করুন","r.doc.4":"প্রেসক্রিপশন ও ক্লিনিকাল নোট যোগ করুন","r.doc.5":"চিকিৎসার অগ্রগতি আপডেট করুন","r.doc.6":"সক্ষম হলে ভয়েস-সহায়তা নোট","r.doc.7":"ছাড়ের সারসংক্ষেপ ও সুপারিশ",
+"r.doc.1":"নির্ধারিত রোগী ও ভর্তি দেখুন","r.doc.2":"রোগীর তথ্য ও ইতিহাস অ্যাক্সেস করুন","r.doc.3":"চিকিৎসা রিপোর্ট ও রেকর্ড পর্যালোচনা করুন","r.doc.4":"প্রেসক্রিপশন ও ক্লিনিকাল নোট যোগ করুন","r.doc.5":"চিকিৎসার অগ্রগতি আপডেট করুন","r.doc.7":"ছাড়ের সারসংক্ষেপ ও সুপারিশ",
 "r.own.1":"রিয়েল-টাইম বেড দখলের দৃশ্য","r.own.2":"ভর্তি ও ছাড় পর্যবেক্ষণ","r.own.3":"রাজস্ব ও বিলিং ওভারভিউ","r.own.4":"বকেয়া পেমেন্ট ট্র্যাকিং","r.own.5":"রোগী পরিসংখ্যান ও প্রবণতা","r.own.6":"ডাক্তার ও কর্মী কার্যকলাপ ওভারভিউ","r.own.7":"অপারেশনাল বিশ্লেষণ ও সুবিধা ওভারভিউ",
 "workflow.eyebrow":"কীভাবে কাজ করে","workflow.h2":"সম্পূর্ণ সুবিধার ওয়ার্কফ্লো। আট ধাপে।",
 "workflow.sub":"AuraScale OS রোগীর যাত্রার প্রতিটি পর্যায় একটি জায়গায় সংযুক্ত করে।",
@@ -1663,7 +1587,7 @@ bn:{
 "step.3":"বেড ও ডাক্তার নির্ধারণ করুন","step.3d":"প্রাপ্যতার উপর ভিত্তি করে সঠিক বেডের ধরন বরাদ্দ করুন এবং আপনার প্যানেল থেকে একজন ডাক্তার নির্ধারণ করুন।",
 "step.4":"চিকিৎসা ও নথি পরিচালনা করুন","step.4d":"ডাক্তাররা নোট, প্রেসক্রিপশন এবং রিপোর্ট আপডেট করেন। নথিগুলি রোগীর রেকর্ডের বিপরীতে সংরক্ষণ করা হয়।",
 "step.5":"বিল তৈরি করুন","step.5d":"রুম, ডাক্তার, পদ্ধতি, ওষুধ এবং সমস্ত প্রযোজ্য চার্জ অন্তর্ভুক্ত একটি আইটেমযুক্ত বিল তৈরি করুন।",
-"step.6":"কভারেজ / পেমেন্ট পথ অন্বেষণ করুন","step.6d":"রোগীর জন্য প্রযোজ্য সরকারি প্রকল্প, বীমা, অর্থায়ন বা স্ব-পেমেন্টের বিকল্পগুলি পর্যালোচনা করুন।",
+"step.6":"কভারেজ / পেমেন্ট পথ অন্বেষণ করুন","step.6d":"রোগীর জন্য প্রযোজ্য সরকারি প্রকল্প, বীমা বা স্ব-পেমেন্টের বিকল্পগুলি পর্যালোচনা করুন।",
 "step.7":"পেমেন্ট / নিষ্পত্তি সম্পন্ন করুন","step.7d":"নির্বাচিত পথের মাধ্যমে পেমেন্ট প্রক্রিয়া করুন এবং বিলিং রেকর্ড সেই অনুযায়ী চিহ্নিত করুন।",
 "step.8":"ছাড় দিন এবং রেকর্ড সংরক্ষণ করুন","step.8d":"ছাড়ের সারসংক্ষেপ জারি করুন, বেডের অবস্থা আপডেট করুন এবং সম্পূর্ণ ডিজিটাল রেকর্ড সংরক্ষণ করুন।",
 "ab.eyebrow":"সংযুক্ত স্বাস্থ্যসেবা কভারেজের দিকে এগিয়ে চলা","ab.h2":"আয়ুষ্মান ভারত ইন্টিগ্রেশন চলমান।",
@@ -1678,37 +1602,34 @@ bn:{
 "cov.sub":"AuraScale একটি ওয়ার্কফ্লো থেকে বিভিন্ন পেমেন্ট এবং কভারেজ পথ পরিচালনায় স্বাস্থ্যসেবা প্রতিষ্ঠানগুলিকে সাহায্য করার জন্য ডিজাইন করা হচ্ছে।",
 "cov.gov":"সরকারি প্রকল্প","cov.gov.d":"AuraScale অনুমোদিত ডিজিটাল ইন্টিগ্রেশনের দিকে এগিয়ে চলেছে যেখানে সরকারী অ্যাক্সেস পাওয়া যায়। আয়ুষ্মান ভারত ইন্টিগ্রেশন চলমান।",
 "cov.ins":"বীমা / টিপিএ","cov.ins.d":"অনুমোদিত ইন্টিগ্রেশন এবং প্রযোজ্য প্রয়োজনীয়তা পূরণের সাপেক্ষে বীমাকারী এবং টিপিএ ওয়ার্কফ্লো সমর্থন করার জন্য ডিজাইন করা হয়েছে।",
-"cov.fin":"স্বাস্থ্যসেবা অর্থায়ন","cov.fin.d":"অনুমোদিত অর্থায়ন বিকল্প পাওয়া গেলে, যোগ্য রোগীরা অংশগ্রহণকারী প্রদানকারীদের মাধ্যমে স্বাস্থ্যসেবা অর্থায়ন অ্যাক্সেস করতে পারবেন।",
 "cov.self":"স্ব-পেমেন্ট","cov.self.d":"স্পষ্ট আইটেমযুক্ত চালান, পেমেন্ট রসিদ এবং রোগী ও প্রতিষ্ঠানের জন্য বকেয়া ব্যালেন্স ট্র্যাকিং সহ পূর্ণ স্ব-পেমেন্ট বিলিং।",
-"fin.eyebrow":"স্বাস্থ্যসেবা অর্থায়ন","fin.h2":"যোগ্য রোগীদের আরও বেশি পেমেন্টের সুযোগ দিন।",
-"fin.sub":"অনুমোদিত অর্থায়ন বিকল্প পাওয়া গেলে, যোগ্য রোগীরা অংশগ্রহণকারী অর্থায়ন প্রদানকারীদের মাধ্যমে চিকিৎসার খরচ পরিচালনা করতে স্বাস্থ্যসেবা অর্থায়ন ব্যবহার করতে পারবেন।",
-"fin.s1":"চিকিৎসা বিল তৈরি","fin.s1d":"AuraScale ভর্তির জন্য সম্পূর্ণ আইটেমযুক্ত বিল তৈরি করে।",
-"fin.s2":"যোগ্যতা পরীক্ষা","fin.s2d":"প্রদানকারীর মানদণ্ডের উপর ভিত্তি করে রোগীকে প্রযোজ্য অর্থায়নের বিকল্পের জন্য পরীক্ষা করা হয়।",
-"fin.s3":"অর্থায়নের বিকল্প উপস্থাপন","fin.s3d":"যোগ্য হলে, রোগীকে অংশগ্রহণকারী প্রদানকারীদের কাছ থেকে উপলব্ধ অর্থায়নের বিকল্প এবং শর্ত উপস্থাপন করা হয়।",
-"fin.s4":"অর্থায়নের শর্ত অনুযায়ী পেমেন্ট","fin.s4d":"পেমেন্টের সময়সূচী এবং শর্ত সংশ্লিষ্ট অর্থায়ন প্রদানকারী দ্বারা নির্ধারিত হয়।",
-"fin.s5":"প্রতিষ্ঠান পেমেন্ট পায়","fin.s5d":"প্রদানকারীর চুক্তি এবং প্রক্রিয়া অনুযায়ী স্বাস্থ্যসেবা প্রতিষ্ঠানে নিষ্পত্তি ঘটে।",
-"fin.disclaimer":"অর্থায়নের বিকল্পগুলি অংশগ্রহণকারী প্রদানকারীর প্রাপ্যতা, যোগ্যতার মানদণ্ড এবং প্রযোজ্য চুক্তির সাপেক্ষে। শর্ত, সুদের হার এবং অনুমোদন সংশ্লিষ্ট অর্থায়ন প্রদানকারী দ্বারা নির্ধারিত হয়।",
-"fin.why.title":"কেন এটি গুরুত্বপূর্ণ","fin.why.desc":"বড় চিকিৎসা বিল এক পেমেন্টে পরিচালনা করা কঠিন হতে পারে। যেখানে অর্থায়ন পাওয়া যায় এবং রোগী যোগ্য, এটি তাদের আরও আরামদায়কভাবে চিকিৎসা অ্যাক্সেস করতে সাহায্য করতে পারে।",
-"fin.note.title":"জানা দরকার","fin.note.desc":"AuraScale অর্থায়নের অনুমোদন, সুদের হার বা নিষ্পত্তির পরিমাণের নিশ্চয়তা দেয় না। সমস্ত অর্থায়নের শর্ত সংশ্লিষ্ট প্রদানকারী দ্বারা নির্ধারিত হয়।",
-"fin.part.title":"অংশগ্রহণকারী প্রদানকারী","fin.part.desc":"প্রযোজ্য চুক্তি থাকলে অংশগ্রহণকারী প্রদানকারীদের মাধ্যমে অর্থায়ন পাওয়া যায়। প্রদানকারীর বিবরণ যেখানে পাওয়া যাবে সেখানে জানানো হবে।",
+
+
+
+
+
+
+
+
+
+
 "vp.eyebrow":"কেন AuraScale OS বেছে নেবেন","vp.h2":"কেন নার্সিং হোম AuraScale OS থেকে উপকৃত হতে পারে",
 "vp.sub":"AuraScale OS নার্সিং হোম এবং ক্লিনিক আসলে যেভাবে কাজ করে তার জন্য মাটি থেকে ডিজাইন করা হয়েছে।",
 "vp.1.t":"একটি সংযুক্ত সিস্টেম","vp.1.d":"রোগী, ভর্তি, বেড, ডাক্তার এবং বিলিং ওয়ার্কফ্লো — সব একটি প্ল্যাটফর্মে।",
 "vp.2.t":"দ্রুত প্রশাসন","vp.2.d":"ফ্রন্ট ডেস্কে পুনরাবৃত্তিমূলক ম্যানুয়াল কাজ কমান। রোগী নিবন্ধন, বিলিং এবং নথি ব্যবস্থাপনা দ্রুততর।",
 "vp.3.t":"ভালো দৃশ্যমানতা","vp.3.d":"মালিকরা একটি রিয়েল-টাইম ওভারভিউ থেকে বেড, ভর্তি, বিলিং এবং অপারেশনাল কার্যকলাপ পর্যবেক্ষণ করতে পারেন।",
-"vp.4.t":"নমনীয় পেমেন্ট ওয়ার্কফ্লো","vp.4.d":"যোগ্য রোগীদের প্রযোজ্য কভারেজ এবং অর্থায়ন পথ অ্যাক্সেস করতে সাহায্য করুন।",
+"vp.4.t":"নমনীয় পেমেন্ট ওয়ার্কফ্লো","vp.4.d":"যোগ্য রোগীদের প্রযোজ্য কভারেজ পথ অ্যাক্সেস করতে সাহায্য করুন।",
 "vp.5.t":"স্কেলযোগ্য পরিকাঠামো","vp.5.d":"পৃথক নার্সিং হোম এবং ক্লিনিক থেকে পশ্চিমবঙ্গ জুড়ে বৃহত্তর স্বাস্থ্যসেবা নেটওয়ার্কে বৃদ্ধি পাওয়ার জন্য ডিজাইন করা হয়েছে।",
 "vp.cta.t":"অ্যাকশনে দেখতে চান?","vp.cta.d":"একটি ডেমো বুক করুন এবং দেখুন AuraScale OS আপনার প্রতিষ্ঠানের জন্য কীভাবে কাজ করতে পারে।","vp.cta.btn":"ডেমো অনুরোধ করুন",
 "pay.eyebrow":"পেমেন্ট পথ","pay.h2":"একটি চিকিৎসা বিল। একাধিক পেমেন্ট পথ।",
 "pay.sub":"AuraScale OS স্বাস্থ্যসেবা প্রতিষ্ঠানগুলিকে প্রতিটি রোগীর পরিস্থিতির জন্য বিভিন্ন পেমেন্ট পথ বুঝতে এবং অ্যাক্সেস করতে সাহায্য করে।",
-"pay.note1":"নিচের পেমেন্ট পথের এক বা একাধিকের জন্য রোগীরা যোগ্য হতে পারেন, তাদের পরিস্থিতি, প্রযোজ্য সরকারি নিয়ম, বীমা পলিসি এবং অর্থায়ন প্রদানকারীর যোগ্যতার উপর নির্ভর করে।",
-"pay.note2":"AuraScale সরকারি প্রকল্প, বীমা বা অর্থায়নের জন্য রোগীর যোগ্যতা নির্ধারণ করে না।",
+"pay.note1":"নিচের পেমেন্ট পথের এক বা একাধিকের জন্য রোগীরা যোগ্য হতে পারেন, তাদের পরিস্থিতি, প্রযোজ্য সরকারি নিয়ম এবং বীমা পলিসির উপর নির্ভর করে।",
+"pay.note2":"AuraScale সরকারি প্রকল্প বা বীমার জন্য রোগীর যোগ্যতা নির্ধারণ করে না।",
 "pay.card.label":"চিকিৎসা বিল (ডেমো)","pay.card.badge":"শুধুমাত্র উদাহরণ",
 "pr.gov":"সরকারি প্রকল্প","pr.gov.d":"প্রযোজ্য প্রকল্পের অধীনে যোগ্য হলে (যেমন আয়ুষ্মান ভারত)",
 "pr.ins":"বীমা / টিপিএ","pr.ins.d":"রোগীর প্রযোজ্য বীমা পলিসি থাকলে",
-"pr.fin":"স্বাস্থ্যসেবা অর্থায়ন","pr.fin.d":"যোগ্য হলে, অংশগ্রহণকারী অর্থায়ন প্রদানকারীর মাধ্যমে",
 "pr.self":"স্ব-পেমেন্ট","pr.self.d":"রোগী বা পরিবারের সরাসরি পেমেন্ট",
-"pay.card.note":"দেখানো পথগুলি দৃষ্টান্তমূলক। প্রকৃত যোগ্যতা সংশ্লিষ্ট প্রকল্প, বীমাকারী বা অর্থায়ন প্রদানকারী দ্বারা নির্ধারিত হয়।",
+"pay.card.note":"দেখানো পথগুলি দৃষ্টান্তমূলক। প্রকৃত যোগ্যতা সংশ্লিষ্ট প্রকল্প বা বীমাকারী দ্বারা নির্ধারিত হয়।",
 "clinic.eyebrow":"ক্লিনিকের জন্যও","clinic.h2":"শুধু নার্সিং হোমের জন্য নয়।",
 "clinic.sub":"ক্লিনিক ও পলিক্লিনিকের জন্য সহজ, সংযুক্ত ডিজিটাল ব্যবস্থাপনা।",
 "cf.1":"রোগী নিবন্ধন","cf.2":"অ্যাপয়েন্টমেন্ট","cf.3":"রোগীর ইতিহাস","cf.4":"ডাক্তার ব্যবস্থাপনা","cf.5":"প্রেসক্রিপশন","cf.6":"চিকিৎসা নথি","cf.7":"বিলিং","cf.8":"ফলো-আপ","cf.9":"বিশ্লেষণ",
@@ -1770,7 +1691,7 @@ hi:{
 "roles.doc.label":"डॉक्टर","roles.doc.h":"नैदानिक कार्यप्रवाह",
 "roles.own.label":"मालिक / प्रबंधन","roles.own.h":"परिचालन अवलोकन",
 "r.rec.1":"रोगी पंजीकरण और पहचान कैप्चर","r.rec.2":"AI-सहायता डेटा एंट्री और सत्यापन","r.rec.3":"प्रवेश निर्माण और बेड आवंटन","r.rec.4":"रोगी खोज और रिकॉर्ड एक्सेस","r.rec.5":"बिलिंग कार्यप्रवाह प्रबंधन","r.rec.6":"दस्तावेज़ अपलोड और प्रबंधन","r.rec.7":"भुगतान और कवरेज कार्यप्रवाह",
-"r.doc.1":"नियुक्त रोगी और प्रवेश देखें","r.doc.2":"रोगी जानकारी और इतिहास एक्सेस करें","r.doc.3":"चिकित्सा रिपोर्ट और रिकॉर्ड की समीक्षा करें","r.doc.4":"नुस्खे और नैदानिक नोट्स जोड़ें","r.doc.5":"उपचार प्रगति अपडेट करें","r.doc.6":"जहां सक्षम हो वहां वॉयस-असिस्टेड नोट्स","r.doc.7":"छुट्टी सारांश और सिफारिशें",
+"r.doc.1":"नियुक्त रोगी और प्रवेश देखें","r.doc.2":"रोगी जानकारी और इतिहास एक्सेस करें","r.doc.3":"चिकित्सा रिपोर्ट और रिकॉर्ड की समीक्षा करें","r.doc.4":"नुस्खे और नैदानिक नोट्स जोड़ें","r.doc.5":"उपचार प्रगति अपडेट करें","r.doc.7":"छुट्टी सारांश और सिफारिशें",
 "r.own.1":"रियल-टाइम बेड अधिभोग दृश्य","r.own.2":"प्रवेश और छुट्टी निगरानी","r.own.3":"राजस्व और बिलिंग अवलोकन","r.own.4":"बकाया भुगतान ट्रैकिंग","r.own.5":"रोगी आंकड़े और रुझान","r.own.6":"डॉक्टर और कर्मचारी गतिविधि अवलोकन","r.own.7":"परिचालन विश्लेषण और सुविधा अवलोकन",
 "workflow.eyebrow":"कैसे काम करता है","workflow.h2":"संपूर्ण सुविधा कार्यप्रवाह। आठ चरणों में।",
 "workflow.sub":"AuraScale OS रोगी की यात्रा के हर चरण को एक जगह जोड़ता है।",
@@ -1779,7 +1700,7 @@ hi:{
 "step.3":"बेड और डॉक्टर असाइन करें","step.3d":"उपलब्धता के आधार पर सही बेड प्रकार आवंटित करें और अपने पैनल से एक डॉक्टर असाइन करें।",
 "step.4":"उपचार और दस्तावेज़ प्रबंधित करें","step.4d":"डॉक्टर नोट्स, नुस्खे और रिपोर्ट अपडेट करते हैं। दस्तावेज़ रोगी के रिकॉर्ड के विरुद्ध संग्रहीत किए जाते हैं।",
 "step.5":"बिल तैयार करें","step.5d":"कमरे, डॉक्टर, प्रक्रियाओं, दवाओं और सभी लागू शुल्कों को कवर करने वाला आइटमाइज़्ड बिल बनाएं।",
-"step.6":"कवरेज/भुगतान मार्ग खोजें","step.6d":"रोगी के लिए लागू सरकारी योजना, बीमा, वित्तपोषण या स्व-भुगतान विकल्पों की समीक्षा करें।",
+"step.6":"कवरेज/भुगतान मार्ग खोजें","step.6d":"रोगी के लिए लागू सरकारी योजना, बीमा या स्व-भुगतान विकल्पों की समीक्षा करें।",
 "step.7":"भुगतान/निपटान पूरा करें","step.7d":"चयनित मार्ग के माध्यम से भुगतान संसाधित करें और बिलिंग रिकॉर्ड को तदनुसार चिह्नित करें।",
 "step.8":"छुट्टी दें और रिकॉर्ड बनाए रखें","step.8d":"छुट्टी सारांश जारी करें, बेड स्थिति अपडेट करें और पूर्ण डिजिटल रिकॉर्ड संरक्षित करें।",
 "ab.eyebrow":"जुड़े हुए स्वास्थ्य सेवा कवरेज की ओर बढ़ना","ab.h2":"आयुष्मान भारत एकीकरण प्रगति में।",
@@ -1794,37 +1715,34 @@ hi:{
 "cov.sub":"AuraScale को एक कार्यप्रवाह से विभिन्न भुगतान और कवरेज मार्गों का प्रबंधन करने में स्वास्थ्य सुविधाओं की मदद करने के लिए डिज़ाइन किया जा रहा है।",
 "cov.gov":"सरकारी योजनाएं","cov.gov.d":"AuraScale अधिकृत डिजिटल एकीकरण की ओर बढ़ रहा है जहां आधिकारिक पहुंच उपलब्ध है। आयुष्मान भारत एकीकरण जारी है।",
 "cov.ins":"बीमा / टीपीए","cov.ins.d":"अधिकृत एकीकरण और लागू आवश्यकताओं के अधीन बीमाकर्ता और टीपीए कार्यप्रवाह का समर्थन करने के लिए डिज़ाइन किया गया।",
-"cov.fin":"स्वास्थ्य सेवा वित्तपोषण","cov.fin.d":"जहां अधिकृत वित्तपोषण विकल्प उपलब्ध हैं, पात्र रोगी भाग लेने वाले प्रदाताओं के माध्यम से स्वास्थ्य सेवा वित्तपोषण तक पहुंच सकते हैं।",
 "cov.self":"स्व-भुगतान","cov.self.d":"रोगी और सुविधा के लिए स्पष्ट आइटमाइज़्ड चालान, भुगतान रसीदें और बकाया शेष ट्रैकिंग के साथ पूर्ण स्व-भुगतान बिलिंग।",
-"fin.eyebrow":"स्वास्थ्य सेवा वित्तपोषण","fin.h2":"पात्र रोगियों को भुगतान के अधिक तरीके दें।",
-"fin.sub":"जहां अधिकृत वित्तपोषण विकल्प उपलब्ध हैं, पात्र रोगी भाग लेने वाले वित्तपोषण प्रदाताओं के माध्यम से उपचार खर्च का प्रबंधन करने के लिए स्वास्थ्य सेवा वित्तपोषण का उपयोग कर सकते हैं।",
-"fin.s1":"उपचार बिल तैयार","fin.s1d":"AuraScale प्रवेश के लिए पूर्ण आइटमाइज़्ड बिल तैयार करता है।",
-"fin.s2":"पात्रता जांच","fin.s2d":"प्रदाता मानदंडों के आधार पर रोगी को लागू वित्तपोषण विकल्पों के लिए जांचा जाता है।",
-"fin.s3":"वित्तपोषण विकल्प प्रस्तुत","fin.s3d":"पात्र होने पर, रोगी को भाग लेने वाले प्रदाताओं से उपलब्ध वित्तपोषण विकल्प और शर्तें प्रस्तुत की जाती हैं।",
-"fin.s4":"वित्तपोषण शर्तों के अनुसार भुगतान","fin.s4d":"भुगतान अनुसूची और शर्तें संबंधित वित्तपोषण प्रदाता द्वारा निर्धारित की जाती हैं।",
-"fin.s5":"सुविधा को भुगतान मिलता है","fin.s5d":"प्रदाता समझौते और प्रक्रिया के अनुसार स्वास्थ्य सुविधा को निपटान होता है।",
-"fin.disclaimer":"वित्तपोषण विकल्प भाग लेने वाले प्रदाता की उपलब्धता, पात्रता मानदंड और लागू समझौतों के अधीन हैं। शर्तें, ब्याज दरें और अनुमोदन संबंधित वित्तपोषण प्रदाता द्वारा निर्धारित किए जाते हैं।",
-"fin.why.title":"यह क्यों मायने रखता है","fin.why.desc":"बड़े उपचार बिलों को एक भुगतान में प्रबंधित करना मुश्किल हो सकता है। जहां वित्तपोषण उपलब्ध है और रोगी पात्र है, यह उन्हें अधिक आराम से उपचार तक पहुंचने में मदद कर सकता है।",
-"fin.note.title":"जानना महत्वपूर्ण है","fin.note.desc":"AuraScale वित्तपोषण अनुमोदन, ब्याज दरें या निपटान राशि की गारंटी नहीं देता। सभी वित्तपोषण शर्तें संबंधित प्रदाता द्वारा निर्धारित की जाती हैं।",
-"fin.part.title":"भाग लेने वाले प्रदाता","fin.part.desc":"जहां लागू समझौते मौजूद हैं, वहां भाग लेने वाले प्रदाताओं के माध्यम से वित्तपोषण उपलब्ध है। प्रदाता विवरण जहां उपलब्ध होगा वहां बताया जाएगा।",
+
+
+
+
+
+
+
+
+
+
 "vp.eyebrow":"AuraScale OS क्यों चुनें","vp.h2":"नर्सिंग होम AuraScale OS से क्यों लाभ उठा सकते हैं",
 "vp.sub":"AuraScale OS को नर्सिंग होम और क्लीनिक वास्तव में जिस तरह काम करते हैं, उसके लिए जमीन से ऊपर तक डिज़ाइन किया गया है।",
 "vp.1.t":"एक जुड़ा हुआ सिस्टम","vp.1.d":"रोगी, प्रवेश, बेड, डॉक्टर और बिलिंग कार्यप्रवाह — सब एक मंच में।",
 "vp.2.t":"तेज़ प्रशासन","vp.2.d":"फ्रंट डेस्क पर दोहरावदार मैनुअल काम कम करें। रोगी पंजीकरण, बिलिंग और दस्तावेज़ प्रबंधन तेज़।",
 "vp.3.t":"बेहतर दृश्यता","vp.3.d":"मालिक एक रियल-टाइम अवलोकन से बेड, प्रवेश, बिलिंग और परिचालन गतिविधि की निगरानी कर सकते हैं।",
-"vp.4.t":"लचीला भुगतान कार्यप्रवाह","vp.4.d":"पात्र रोगियों को लागू कवरेज और वित्तपोषण मार्गों तक पहुंचने में मदद करें।",
+"vp.4.t":"लचीला भुगतान कार्यप्रवाह","vp.4.d":"पात्र रोगियों को लागू कवरेज मार्गों तक पहुंचने में मदद करें।",
 "vp.5.t":"स्केलेबल बुनियादी ढांचा","vp.5.d":"व्यक्तिगत नर्सिंग होम और क्लीनिक से पश्चिम बंगाल में बड़े स्वास्थ्य सेवा नेटवर्क तक बढ़ने के लिए डिज़ाइन किया गया।",
 "vp.cta.t":"इसे कार्रवाई में देखना चाहते हैं?","vp.cta.d":"एक डेमो बुक करें और देखें कि AuraScale OS आपकी सुविधा के लिए कैसे काम कर सकता है।","vp.cta.btn":"डेमो का अनुरोध करें",
 "pay.eyebrow":"भुगतान मार्ग","pay.h2":"एक उपचार बिल। कई भुगतान मार्ग।",
 "pay.sub":"AuraScale OS स्वास्थ्य सुविधाओं को प्रत्येक रोगी की स्थिति के लिए विभिन्न भुगतान मार्गों को समझने और उन तक पहुंचने में मदद करता है।",
-"pay.note1":"नीचे दिए गए एक या अधिक भुगतान मार्गों के लिए रोगी पात्र हो सकते हैं, उनकी स्थिति, लागू सरकारी नियमों, बीमा पॉलिसी और वित्तपोषण प्रदाता पात्रता पर निर्भर करते हुए।",
-"pay.note2":"AuraScale सरकारी योजनाओं, बीमा या वित्तपोषण के लिए रोगी पात्रता निर्धारित नहीं करता।",
+"pay.note1":"नीचे दिए गए एक या अधिक भुगतान मार्गों के लिए रोगी पात्र हो सकते हैं, उनकी स्थिति, लागू सरकारी नियमों और बीमा पॉलिसी पर निर्भर करते हुए।",
+"pay.note2":"AuraScale सरकारी योजनाओं या बीमा के लिए रोगी पात्रता निर्धारित नहीं करता।",
 "pay.card.label":"उपचार बिल (डेमो)","pay.card.badge":"केवल उदाहरण",
 "pr.gov":"सरकारी योजना","pr.gov.d":"लागू योजना के तहत पात्र होने पर (जैसे आयुष्मान भारत)",
 "pr.ins":"बीमा / टीपीए","pr.ins.d":"यदि रोगी के पास लागू बीमा पॉलिसी है",
-"pr.fin":"स्वास्थ्य सेवा वित्तपोषण","pr.fin.d":"पात्र होने पर, भाग लेने वाले वित्तपोषण प्रदाता के माध्यम से",
 "pr.self":"स्व-भुगतान","pr.self.d":"रोगी या परिवार द्वारा सीधा भुगतान",
-"pay.card.note":"दिखाए गए मार्ग उदाहरणात्मक हैं। वास्तविक पात्रता संबंधित योजना, बीमाकर्ता या वित्तपोषण प्रदाता द्वारा निर्धारित की जाती है।",
+"pay.card.note":"दिखाए गए मार्ग उदाहरणात्मक हैं। वास्तविक पात्रता संबंधित योजना या बीमाकर्ता द्वारा निर्धारित की जाती है।",
 "clinic.eyebrow":"क्लीनिक के लिए भी","clinic.h2":"केवल नर्सिंग होम के लिए नहीं।",
 "clinic.sub":"क्लीनिक और पॉलीक्लीनिक के लिए सरल, जुड़ा हुआ डिजिटल प्रबंधन।",
 "cf.1":"रोगी पंजीकरण","cf.2":"अपॉइंटमेंट","cf.3":"रोगी इतिहास","cf.4":"डॉक्टर प्रबंधन","cf.5":"नुस्खे","cf.6":"चिकित्सा दस्तावेज़","cf.7":"बिलिंग","cf.8":"फॉलो-अप","cf.9":"विश्लेषण",
