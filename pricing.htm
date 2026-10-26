@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | AuraScale OS</title>
+<meta name="description" content="AuraScale OS pricing for pharmacies, wholesalers, diagnostic labs, clinics and nursing homes. Monthly, 6-month and yearly plans, all inclusive of GST. 7-day free trial.">
+<link rel="canonical" href="https://aurascale.in/pricing">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="Pricing | AuraScale OS">
+<meta property="og:description" content="Plans for pharmacies, wholesalers, labs, clinics and nursing homes. Monthly, 6-month and yearly. GST included. 7-day free trial.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aurascale.in/pricing">
+<meta property="og:image" content="https://aurascale.in/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B4F72;--navy-d:#0F2E42;--teal:#00B4A6;--teal-d:#007A70;--teal-bg:#EEF9F8;--ice:#F4F8FC;--text:#1A2332;--muted:#5A7088;--bdr:#E2ECF2;--surf:#FAFCFD;--gold:#A86A12;
+--fd:'Plus Jakarta Sans','Hind Siliguri','Noto Sans Devanagari',sans-serif;--fb:'Inter','Hind Siliguri','Noto Sans Devanagari',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--fb);color:var(--text);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--bdr)}
+.nav-in{height:64px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.05rem;color:var(--navy);text-decoration:none;white-space:nowrap}
+.logo img{width:34px;height:34px;border-radius:9px}
+.nav-r{display:flex;align-items:center;gap:12px}
+.home-link{font-weight:600;font-size:.9rem;color:var(--navy);text-decoration:none;padding:8px 4px}
+.lang-sw{display:flex;gap:2px;background:var(--surf);border-radius:50px;padding:3px;border:1px solid var(--bdr)}
+.lb{font-size:.78rem;font-weight:600;color:var(--muted);padding:6px 10px;border-radius:50px;min-height:32px}
+.lb.active{background:#fff;color:var(--navy);box-shadow:0 1px 4px rgba(27,79,114,.12)}
+.btn{font-family:var(--fd);font-weight:700;font-size:.92rem;text-decoration:none;padding:11px 22px;border-radius:50px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-p{background:var(--teal);color:#fff}
+.btn-p:hover{background:#00A296}
+.btn-o{border:1.5px solid var(--bdr);color:var(--navy);background:#fff}
+.btn-o:hover{border-color:var(--teal);background:var(--teal-bg)}
+.btn-wa{background:#1FA855;color:#fff}
+.btn-wa:hover{background:#178E47}
+.nav .btn{padding:8px 16px;min-height:38px;font-size:.85rem}
+@media(max-width:760px){.nav .btn,.home-link{display:none}}
+@media(max-width:380px){.logo span{display:none}}
+/* hero */
+.hero{background:var(--ice);border-bottom:1px solid var(--bdr)}
+.hero .wrap{padding-block:44px 34px;text-align:center}
+.eyebrow{font-family:var(--fd);font-size:.76rem;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--teal-d)}
+h1{font-family:var(--fd);font-weight:800;font-size:clamp(1.8rem,4.4vw,2.6rem);line-height:1.15;color:var(--navy-d);margin-top:8px;text-wrap:balance}
+.lede{margin:12px auto 0;font-size:1.02rem;color:var(--muted);max-width:620px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:18px;font-size:.9rem;color:var(--navy);font-weight:600}
+.chips span::before{content:"\2713";color:var(--teal-d);margin-right:6px;font-weight:800}
+section{padding-block:44px}
+h2{font-family:var(--fd);font-weight:800;font-size:clamp(1.3rem,3vw,1.75rem);line-height:1.25;color:var(--navy-d);text-wrap:balance}
+.sub{color:var(--muted);margin-top:6px;max-width:680px;font-size:.96rem}
+.head{margin-bottom:22px}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.plan{border:1px solid var(--bdr);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0;background:#fff}
+.plan.hl{border-color:var(--teal)}
+.plan.best{border-color:#E3C489}
+.p-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.p-name{font-family:var(--fd);font-weight:800;font-size:1.12rem;color:var(--navy)}
+.p-who{font-size:.85rem;color:var(--muted)}
+.tag{font-size:.68rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;border-radius:50px;padding:3px 9px;white-space:nowrap;color:var(--teal-d);background:var(--teal-bg)}
+.tag.g{color:var(--gold);background:#FBF3E4}
+.p-price{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.p-amt{font-family:var(--fd);font-weight:800;font-size:2.1rem;line-height:1;color:var(--navy-d);font-variant-numeric:tabular-nums}
+.p-per{font-weight:600;color:var(--muted);font-size:.92rem}
+.p-note{font-size:.8rem;color:var(--muted);margin-top:-6px}
+.rows{display:grid;gap:6px;background:var(--surf);border-radius:12px;padding:10px 12px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:.92rem}
+.row b{font-variant-numeric:tabular-nums;color:var(--navy-d)}
+.save{font-size:.74rem;font-weight:700;color:var(--teal-d);margin-left:6px}
+.feat{list-style:none;display:grid;gap:6px;font-size:.88rem;color:#2C3E50}
+.feat li{display:flex;gap:8px}
+.feat li::before{content:"\2713";flex-shrink:0;font-weight:800;color:var(--teal-d)}
+.plan .btn{margin-top:auto;width:100%}
+/* beds toggle */
+.star-btn{display:inline-flex;align-items:center;gap:6px;font-size:.84rem;font-weight:600;color:var(--navy);text-decoration:underline dotted;text-underline-offset:3px;padding:4px 0;min-height:32px;align-self:flex-start}
+.star-btn .st{color:var(--gold);font-weight:800;font-size:1.05rem;text-decoration:none}
+.star-btn .ar{font-size:.7rem;transition:transform .2s}
+.star-btn[aria-expanded="true"] .ar{transform:rotate(180deg)}
+.beds{overflow-x:auto;border:1px solid var(--bdr);border-radius:12px}
+.beds table{min-width:0;font-size:.8rem}
+.beds th,.beds td{padding:7px 8px;white-space:nowrap}
+.beds th{font-size:.64rem;letter-spacing:.3px}
+/* offer */
+.offer{background:var(--ice);border-radius:18px;padding:26px}
+.o-tag{font-family:var(--fd);font-size:.74rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+.o-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:20px}
+.o-grid>div{min-width:0}
+.o-k{font-size:.78rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+.o-big{font-family:var(--fd);font-weight:800;font-size:1.35rem;color:var(--teal-d);margin:2px 0 8px}
+.o-grid .feat{font-size:.86rem}
+.o-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--bdr);display:grid;gap:6px;font-size:.9rem;color:#2C3E50}
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--bdr);border-radius:14px}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:.92rem}
+th,td{padding:11px 14px;border-bottom:1px solid var(--bdr);text-align:left}
+th{font-size:.72rem;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--surf)}
+td.n,th.n{text-align:right;white-space:nowrap}
+td.n{font-weight:600;font-variant-numeric:tabular-nums;color:var(--navy-d)}
+tbody tr:last-child td{border-bottom:0}
+td .st{color:var(--gold);font-weight:800}
+/* terms */
+.tc{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 28px;font-size:.92rem;color:#2C3E50}
+.tc li{min-width:0}
+.tc b{color:var(--navy-d)}
+.tc a{color:var(--navy);text-underline-offset:3px}
+/* cta */
+.cta{border:1px solid var(--bdr);background:var(--teal-bg);border-radius:18px;padding:26px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.cta p{color:var(--muted);margin-top:4px}
+.cta .btns{display:flex;gap:10px;flex-wrap:wrap}
+footer{background:var(--navy-d);color:#B9CCD9;margin-top:44px}
+.foot-in{padding-block:32px}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 22px}
+.foot-links a{color:#E3EEF5;text-decoration:none;font-size:.93rem;padding:8px 0;min-height:44px;display:inline-flex;align-items:center}
+.foot-links a:hover{text-decoration:underline}
+.foot-reg{font-size:.84rem;line-height:1.8;max-width:620px;margin-top:12px}
+.foot-reg strong{color:#fff}
+@media(max-width:1000px){.plans{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.o-grid{grid-template-columns:minmax(0,1fr);gap:16px}.tc{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:640px){.plans{grid-template-columns:minmax(0,1fr)}section{padding-block:34px}.offer,.cta{padding:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.star-btn .ar{transition:none}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in">
+  <a class="logo" href="/"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNjQwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjY0MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFCQjg4MCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwQTZCNEIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iNjQwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KICAgIDxwYXRoIGQ9Ik0gMjI3IDEzMyBBIDExOCAxMTggMCAwIDEgNDEzIDEzMyIgc3Ryb2tlLXdpZHRoPSIxNiIgb3BhY2l0eT0iMC4zOCIvPgogICAgPHBhdGggZD0iTSAyNjIgMTU0IEEgNzggNzggMCAwIDEgMzc4IDE1NCIgc3Ryb2tlLXdpZHRoPSIxNiIgb3BhY2l0eT0iMC43Ii8+CiAgPC9nPgogIDxwYXRoIGQ9Ik0gMTk2IDQ1MiBMIDMyMCAyMTQgTCA0NDQgNDUyIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxnIGZpbGw9IiM3Q0U2QkMiPgogICAgPHJlY3QgeD0iMjg0IiB5PSIzNDgiIHdpZHRoPSI3MiIgaGVpZ2h0PSIyNCIgcng9IjEyIi8+CiAgICA8cmVjdCB4PSIzMDgiIHk9IjMyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjcyIiByeD0iMTIiLz4KICA8L2c+Cjwvc3ZnPg==" alt="AuraScale OS logo" width="34" height="34"><span>AuraScale OS</span></a>
+  <div class="nav-r">
+    <a class="home-link" href="/" data-k="nav.home">Home</a>
+    <div class="lang-sw" role="group" aria-label="Language">
+      <button class="lb active" id="lb-en" onclick="setLang('en')">EN</button>
+      <button class="lb" id="lb-bn" onclick="setLang('bn')">বাংলা</button>
+      <button class="lb" id="lb-hi" onclick="setLang('hi')">हिन्दी</button>
+    </div>
+    <a class="btn btn-p js-mail" href="mailto:ceo@aurascale.in" data-k="cta.demo">Request a demo</a>
+  </div>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow" data-k="hero.eyebrow">Pricing</div>
+  <h1 data-k="hero.h1">One price list for every healthcare business</h1>
+  <p class="lede" data-k="hero.lede">Pharmacy, wholesale, diagnostic lab, clinic or nursing home. Pay monthly, every 6 months or once a year. The longer you choose, the more you save.</p>
+  <div class="chips"><span data-k="chip.gst">All prices include GST</span><span data-k="chip.trial">7-day free trial</span><span data-k="chip.setup">Free setup and training</span></div>
+</div></div>
+
+<main>
+  <section id="plans"><div class="wrap">
+    <div class="plans" id="plan-grid"></div>
+  </div></section>
+
+  <section id="offer" style="padding-top:0"><div class="wrap">
+    <div class="offer">
+      <div class="o-tag" data-k="of.tag">Launch offer · first 50 customers · until 30 November 2026</div>
+      <h2 style="margin-top:4px" data-k="of.h2">Join now and get more</h2>
+      <div class="o-grid">
+        <div><div class="o-k" data-k="t.m">Monthly</div><div class="o-big" data-k="of.m.big">7 days free</div><ul class="feat" data-list="of.m.l"></ul></div>
+        <div><div class="o-k" data-k="t.6">6 months</div><div class="o-big" data-k="of.6.big">+1 month free</div><ul class="feat" data-list="of.6.l"></ul></div>
+        <div><div class="o-k" data-k="t.12">1 year</div><div class="o-big" style="color:var(--gold)" data-k="of.12.big">+2 months free</div><ul class="feat" data-list="of.12.l"></ul></div>
+      </div>
+      <div class="o-foot"><div data-k="of.ref"></div><div data-k="of.eg1"></div><div data-k="of.eg2"></div></div>
+    </div>
+  </div></section>
+
+  <section id="renewal" style="padding-top:0"><div class="wrap">
+    <div class="head"><h2 data-k="rn.h2">Renewal</h2><p class="sub" data-k="rn.sub"></p></div>
+    <div class="tbl"><table>
+      <thead><tr><th data-k="th.plan">Plan</th><th class="n" data-k="t.6">6 months</th><th class="n" data-k="t.12">1 year</th></tr></thead>
+      <tbody id="rn-body"></tbody>
+    </table></div>
+  </div></section>
+
+  <section id="terms" style="padding-top:0"><div class="wrap">
+    <div class="head"><h2 data-k="tc.h2">Good to know</h2></div>
+    <ul class="tc" id="tc-list"></ul>
+  </div></section>
+
+  <div class="wrap">
+    <div class="cta">
+      <div><h2 data-k="cta.h2">Start your 7-day free trial</h2><p data-k="cta.p">We set it up for you and train your staff. No card needed.</p></div>
+      <div class="btns">
+        <a class="btn btn-wa js-wa" href="https://wa.me/918017465987" target="_blank" rel="noopener" data-k="cta.wa">WhatsApp us</a>
+        <a class="btn btn-o js-mail" href="mailto:ceo@aurascale.in" data-k="cta.demo">Request a demo</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap foot-in">
+  <nav class="foot-links" aria-label="Legal and contact">
+    <a href="/">Home</a><a href="/pricing">Pricing</a><a href="/terms">Terms &amp; Conditions</a><a href="/privacy">Privacy Policy</a><a href="/refund">Refund &amp; Cancellation</a><a href="/contact">Contact Us</a>
+  </nav>
+  <div class="foot-reg"><strong>AuraScale OS</strong> &middot; MSME Registered &middot; UDYAM: WB-18-0186128 &middot; GSTIN: 19BDYPL9210K1ZR<br>FC42+FVC, Kandarpapur, Garia, West Bengal 700084, India<br>&copy; 2026 AuraScale OS. All rights reserved.</div>
+</div></footer>
+
+<script>
+/* ===== PRICES (edit here) — all inclusive of GST ===== */
+var PLANS = [
+  { id:'pharmacy',  m:459,  h:2499,  y:4599 },
+  { id:'wholesale', m:999,  h:5499,  y:9999 },
+  { id:'lab',       m:1299, h:6999,  y:12999 },
+  { id:'clinic',    m:1499, h:7999,  y:14999 },
+  { id:'nh',        m:2999, h:16499, y:29999, beds:true, hl:true },
+  { id:'combo',     m:3499, h:18999, y:34999, beds:true, best:true }
+];
+/* bed bands for Nursing Home and Hospital Combo: [label key, monthly, 6 months, 1 year] */
+var BEDS = {
+  nh:    [ ['b15',2999,16499,29999], ['b30',3999,21999,39999], ['b50',5499,29999,54999] ],
+  combo: [ ['b15',3499,18999,34999], ['b30',4499,24499,44999], ['b50',5999,32999,59999] ]
+};
+var EMAIL = 'ceo@aurascale.in', WA = '918017465987';
+
+var T = {
+en:{
+"nav.home":"Home","cta.demo":"Request a demo","cta.wa":"WhatsApp us",
+"hero.eyebrow":"Pricing","hero.h1":"One price list for every healthcare business",
+"hero.lede":"Pharmacy, wholesale, diagnostic lab, clinic or nursing home. Pay monthly, every 6 months or once a year. The longer you choose, the more you save.",
+"chip.gst":"All prices include GST","chip.trial":"7-day free trial","chip.setup":"Free setup and training",
+"t.m":"Monthly","t.6":"6 months","t.12":"1 year","per":"/ month","save":"save","incl":"Inclusive of GST",
+"beds.btn":"Up to 15 beds","beds.th":"Beds","t.6s":"6 mo","t.12s":"1 yr",
+"tag.nh":"PM-JAY ready","tag.combo":"Best value",
+"pharmacy.n":"Pharmacy Retail","pharmacy.w":"Medicine shops and chemists",
+"pharmacy.f":["Bill from a photo of the prescription","Bills on WhatsApp, with GST shown","Substitutes, refill reminders, H1 register","Re-order from your wholesaler in one tap"],
+"wholesale.n":"Wholesale","wholesale.w":"Distributors and stockists",
+"wholesale.f":["Purchase entry from a photo of the supplier's bill","GST invoices, party ledger and dues","Shop orders arrive straight in the app","Monthly report on the owner's WhatsApp"],
+"lab.n":"Diagnostic Lab","lab.w":"Pathology labs and collection centres",
+"lab.f":["Patient registration, tests and bills","Report PDF straight to the patient's WhatsApp","Doctor referrals and commission","Reagent stock and daily cash"],
+"clinic.n":"Clinic","clinic.w":"Doctor chambers, polyclinics and OPD",
+"clinic.f":["Appointments, tokens and patient records","Digital prescriptions on WhatsApp","Visit-fee bills and daily accounts","Follow-up reminders"],
+"nh.n":"Nursing Home","nh.w":"Hospitals with admitted patients",
+"nh.f":["Admissions, beds, discharge and IPD bills","Separate logins for reception, doctors and nurses","PM-JAY / Swasthya Sathi claims and cashless bills","Monthly owner report"],
+"combo.n":"Hospital Combo","combo.w":"Nursing home + pharmacy + lab",
+"combo.f":["Everything in Nursing Home, Pharmacy Retail and Diagnostic Lab","Ward medicines and lab reports go straight to the patient's bill","₹1,258 a month less than buying all three separately"],
+"cta.plan":"Start 7-day free trial",
+"of.tag":"Launch offer · first 50 customers · until 30 November 2026","of.h2":"Join now and get more",
+"of.m.big":"7 days free","of.m.l":["The full software free for 7 days","Free setup and training","Stop any month, no contract"],
+"of.6.big":"+1 month free","of.6.l":["Pay for 6 months, use it for 7","We enter your old stock and party list for free"],
+"of.12.big":"+2 months free","of.12.l":["Pay for 1 year, use it for 14 months","Free entry of your old stock and party list","Your plan price never goes up"],
+"of.ref":"<b>Refer a friend:</b> when someone joins AuraScale through you, you both get 1 month free.",
+"of.eg1":"<b>Hospital Combo, 1 year:</b> pay ₹34,999 and use it for 14 months, just ₹2,500 a month.",
+"of.eg2":"<b>Pharmacy, 1 year:</b> pay ₹4,599 and use it for 14 months, less than ₹11 a day.",
+"b15":"Up to 15","b30":"16–30","b50":"31–50","th.plan":"Plan",
+"rn.h2":"Renewal","rn.sub":"When your plan ends, renew at the same price. No renewal fee.",
+"tc.h2":"Good to know",
+"tc":[["GST included","Every price on this page includes GST. You pay nothing extra."],["7-day free trial","Use the full software free for 7 days. Setup and staff training are free."],["Price by beds","Nursing Home and Hospital Combo prices depend on the number of beds. Tap the * on the plan to see every size."],["Price changes","We announce any price change at least 30 days ahead. Launch-offer yearly customers keep their price."],["Policies","See our <a href=\"/terms\">Terms &amp; Conditions</a> and <a href=\"/refund\">Refund &amp; Cancellation Policy</a>."]],
+"cta.h2":"Start your 7-day free trial","cta.p":"We set it up for you and train your staff. No card needed.",
+"mail.s":"AuraScale demo request","mail.b":"Hello AuraScale,\n\nI would like a demo of AuraScale OS.\n\nName:\nBusiness name:\nType (pharmacy / wholesale / lab / clinic / nursing home):\nPhone:\nCity:\n",
+"wa.t":"Hello AuraScale, I would like to know more about your plans.","wa.plan":"Hello AuraScale, I want to start the 7-day free trial of the {p} plan."
+},
+bn:{
+"nav.home":"হোম","cta.demo":"ডেমো চান","cta.wa":"WhatsApp করুন",
+"hero.eyebrow":"মূল্য তালিকা","hero.h1":"সব স্বাস্থ্য ব্যবসার জন্য একটাই দামের তালিকা",
+"hero.lede":"ফার্মেসি, হোলসেল, ডায়াগনস্টিক ল্যাব, ক্লিনিক বা নার্সিং হোম। প্রতি মাসে, 6 মাসে বা বছরে একবার টাকা দিন। যত বেশি সময়ের জন্য নেবেন, তত বেশি সাশ্রয়।",
+"chip.gst":"সব দাম GST সহ","chip.trial":"7 দিন ফ্রি ট্রায়াল","chip.setup":"সেটআপ আর ট্রেনিং ফ্রি",
+"t.m":"প্রতি মাস","t.6":"6 মাস","t.12":"1 বছর","per":"/ মাস","save":"সাশ্রয়","incl":"GST সহ",
+"beds.btn":"15 বেড পর্যন্ত","beds.th":"বেড","t.6s":"6 মাস","t.12s":"1 বছর",
+"tag.nh":"PM-JAY রেডি","tag.combo":"সবচেয়ে লাভজনক",
+"pharmacy.n":"Pharmacy Retail","pharmacy.w":"ওষুধের দোকান ও কেমিস্ট",
+"pharmacy.f":["প্রেসক্রিপশনের ছবি থেকে বিল","বিল WhatsApp-এ, GST সহ","বদলি ওষুধ, রিফিল রিমাইন্ডার, H1 রেজিস্টার","হোলসেলারকে এক ক্লিকে রি-অর্ডার"],
+"wholesale.n":"Wholesale","wholesale.w":"হোলসেলার, ডিস্ট্রিবিউটর ও স্টকিস্ট",
+"wholesale.f":["সাপ্লায়ারের বিলের ছবি তুললেই পারচেজ এন্ট্রি","GST ইনভয়েস, পার্টি লেজার আর বাকির হিসাব","দোকানের অর্ডার সরাসরি অ্যাপে","মাসিক রিপোর্ট মালিকের WhatsApp-এ"],
+"lab.n":"Diagnostic Lab","lab.w":"প্যাথ ল্যাব ও কালেকশন সেন্টার",
+"lab.f":["রোগী রেজিস্ট্রেশন, টেস্ট আর বিল","রিপোর্ট PDF সরাসরি রোগীর WhatsApp-এ","ডাক্তার রেফারেল আর কমিশন","রিএজেন্ট স্টক আর দৈনিক ক্যাশ"],
+"clinic.n":"Clinic","clinic.w":"ডাক্তারের চেম্বার, পলিক্লিনিক ও OPD",
+"clinic.f":["অ্যাপয়েন্টমেন্ট, টোকেন আর রোগীর রেকর্ড","ডিজিটাল প্রেসক্রিপশন WhatsApp-এ","ভিজিট ফি-র বিল আর দৈনিক হিসাব","ফলো-আপ রিমাইন্ডার"],
+"nh.n":"Nursing Home","nh.w":"ভর্তি রোগী সহ হাসপাতাল",
+"nh.f":["ভর্তি, বেড, ডিসচার্জ আর IPD বিল","রিসেপশন, ডাক্তার, নার্সের আলাদা লগইন","PM-JAY / Swasthya Sathi ক্লেম, ক্যাশলেস বিল","মালিকের মাসিক রিপোর্ট"],
+"combo.n":"Hospital Combo","combo.w":"নার্সিং হোম + ফার্মেসি + ল্যাব",
+"combo.f":["Nursing Home, Pharmacy Retail আর Diagnostic Lab-এর সব সুবিধা","ওয়ার্ডের ওষুধ আর ল্যাব রিপোর্ট সরাসরি রোগীর বিলে","তিনটে আলাদা নেওয়ার চেয়ে মাসে ₹1,258 কম"],
+"cta.plan":"7 দিন ফ্রি ট্রায়াল শুরু করুন",
+"of.tag":"উদ্বোধনী অফার · প্রথম 50 জন · 30 নভেম্বর 2026 পর্যন্ত","of.h2":"আজ নিলে বেশি পাবেন",
+"of.m.big":"7 দিন ফ্রি","of.m.l":["7 দিন পুরো সফটওয়্যার বিনা পয়সায়","সেটআপ আর ট্রেনিং ফ্রি","যে কোনো মাসে বন্ধ করা যায়, কোনো চুক্তি নেই"],
+"of.6.big":"+1 মাস ফ্রি","of.6.l":["6 মাসের দাম দিন, চলবে 7 মাস","পুরনো স্টক আর পার্টির তালিকা আমরা তুলে দেব, ফ্রি"],
+"of.12.big":"+2 মাস ফ্রি","of.12.l":["1 বছরের দাম দিন, চলবে 14 মাস","পুরনো স্টক আর পার্টির তালিকা তুলে দেওয়া ফ্রি","প্ল্যানের দাম কোনোদিন বাড়বে না"],
+"of.ref":"<b>বন্ধুকে আনুন:</b> আপনার রেফারে কেউ AuraScale নিলে দুজনেই 1 মাস ফ্রি পাবেন।",
+"of.eg1":"<b>Hospital Combo, 1 বছর:</b> ₹34,999 দিলে চলবে 14 মাস, মাসে মাত্র ₹2,500।",
+"of.eg2":"<b>Pharmacy, 1 বছর:</b> ₹4,599 দিলে চলবে 14 মাস, দিনে 11 টাকারও কম।",
+"b15":"15 পর্যন্ত","b30":"16–30","b50":"31–50","th.plan":"প্ল্যান",
+"rn.h2":"রিনিউয়াল","rn.sub":"মেয়াদ শেষ হলে একই দামে আবার নিন। কোনো রিনিউয়াল ফি নেই।",
+"tc.h2":"জেনে রাখুন",
+"tc":[["GST সহ দাম","এই পেজের সব দামে GST ধরা আছে। আলাদা করে কিছু দিতে হবে না।"],["7 দিন ফ্রি ট্রায়াল","7 দিন পুরো সফটওয়্যার ফ্রি চালান। সেটআপ আর স্টাফ ট্রেনিং ফ্রি।"],["বেড অনুযায়ী দাম","Nursing Home আর Hospital Combo-র দাম বেডের সংখ্যা অনুযায়ী। সব মাপের দাম দেখতে প্ল্যানের * চাপুন।"],["দাম বদল","দাম বদলালে অন্তত 30 দিন আগে জানানো হবে। উদ্বোধনী অফারের বার্ষিক গ্রাহকদের দাম বাড়বে না।"],["নীতিমালা","আমাদের <a href=\"/terms\">শর্তাবলী</a> আর <a href=\"/refund\">ফেরত ও বাতিলকরণ নীতি</a> দেখুন।"]],
+"cta.h2":"7 দিনের ফ্রি ট্রায়াল শুরু করুন","cta.p":"আমরা সেটআপ করে দিই আর আপনার স্টাফকে শিখিয়ে দিই। কোনো কার্ড লাগবে না।",
+"mail.s":"AuraScale ডেমো চাই","mail.b":"নমস্কার AuraScale,\n\nআমি AuraScale OS-এর একটা ডেমো চাই।\n\nনাম:\nব্যবসার নাম:\nধরন (ফার্মেসি / হোলসেল / ল্যাব / ক্লিনিক / নার্সিং হোম):\nফোন:\nশহর:\n",
+"wa.t":"নমস্কার AuraScale, আপনাদের প্ল্যান নিয়ে জানতে চাই।","wa.plan":"নমস্কার AuraScale, আমি {p} প্ল্যানের 7 দিনের ফ্রি ট্রায়াল শুরু করতে চাই।"
+},
+hi:{
+"nav.home":"होम","cta.demo":"डेमो मांगें","cta.wa":"WhatsApp करें",
+"hero.eyebrow":"मूल्य सूची","hero.h1":"हर स्वास्थ्य व्यवसाय के लिए एक ही मूल्य सूची",
+"hero.lede":"फार्मेसी, होलसेल, डायग्नोस्टिक लैब, क्लिनिक या नर्सिंग होम। हर महीने, 6 महीने में या साल में एक बार भुगतान करें। जितनी लंबी अवधि, उतनी ज़्यादा बचत।",
+"chip.gst":"सभी कीमतें GST सहित","chip.trial":"7 दिन का फ्री ट्रायल","chip.setup":"सेटअप और ट्रेनिंग फ्री",
+"t.m":"प्रति माह","t.6":"6 महीने","t.12":"1 साल","per":"/ माह","save":"बचत","incl":"GST सहित",
+"beds.btn":"15 बेड तक","beds.th":"बेड","t.6s":"6 माह","t.12s":"1 साल",
+"tag.nh":"PM-JAY तैयार","tag.combo":"सबसे फायदेमंद",
+"pharmacy.n":"Pharmacy Retail","pharmacy.w":"दवा की दुकान और केमिस्ट",
+"pharmacy.f":["पर्ची की फोटो से बिल","बिल WhatsApp पर, GST के साथ","वैकल्पिक दवा, रिफिल रिमाइंडर, H1 रजिस्टर","होलसेलर को एक क्लिक में री-ऑर्डर"],
+"wholesale.n":"Wholesale","wholesale.w":"होलसेलर, डिस्ट्रीब्यूटर और स्टॉकिस्ट",
+"wholesale.f":["सप्लायर के बिल की फोटो से पर्चेज एंट्री","GST इनवॉइस, पार्टी लेजर और बकाया","दुकानों के ऑर्डर सीधे ऐप में","मासिक रिपोर्ट मालिक के WhatsApp पर"],
+"lab.n":"Diagnostic Lab","lab.w":"पैथ लैब और कलेक्शन सेंटर",
+"lab.f":["मरीज़ रजिस्ट्रेशन, टेस्ट और बिल","रिपोर्ट PDF सीधे मरीज़ के WhatsApp पर","डॉक्टर रेफरल और कमीशन","रिएजेंट स्टॉक और रोज़ का कैश"],
+"clinic.n":"Clinic","clinic.w":"डॉक्टर चैंबर, पॉलीक्लिनिक और OPD",
+"clinic.f":["अपॉइंटमेंट, टोकन और मरीज़ का रिकॉर्ड","डिजिटल पर्ची WhatsApp पर","विज़िट फीस के बिल और रोज़ का हिसाब","फॉलो-अप रिमाइंडर"],
+"nh.n":"Nursing Home","nh.w":"भर्ती मरीज़ों वाले अस्पताल",
+"nh.f":["भर्ती, बेड, डिस्चार्ज और IPD बिल","रिसेप्शन, डॉक्टर और नर्स के अलग लॉगिन","PM-JAY / Swasthya Sathi क्लेम, कैशलेस बिल","मालिक की मासिक रिपोर्ट"],
+"combo.n":"Hospital Combo","combo.w":"नर्सिंग होम + फार्मेसी + लैब",
+"combo.f":["Nursing Home, Pharmacy Retail और Diagnostic Lab की सभी सुविधाएं","वार्ड की दवा और लैब रिपोर्ट सीधे मरीज़ के बिल में","तीनों अलग लेने से हर महीने ₹1,258 कम"],
+"cta.plan":"7 दिन का फ्री ट्रायल शुरू करें",
+"of.tag":"लॉन्च ऑफर · पहले 50 ग्राहक · 30 नवंबर 2026 तक","of.h2":"आज जुड़ें, ज़्यादा पाएं",
+"of.m.big":"7 दिन फ्री","of.m.l":["7 दिन पूरा सॉफ्टवेयर मुफ्त","सेटअप और ट्रेनिंग फ्री","किसी भी महीने बंद करें, कोई अनुबंध नहीं"],
+"of.6.big":"+1 महीना फ्री","of.6.l":["6 महीने का दाम दें, चलेगा 7 महीने","पुराना स्टॉक और पार्टी सूची हम फ्री में डालेंगे"],
+"of.12.big":"+2 महीने फ्री","of.12.l":["1 साल का दाम दें, चलेगा 14 महीने","पुराना स्टॉक और पार्टी सूची फ्री में","प्लान की कीमत कभी नहीं बढ़ेगी"],
+"of.ref":"<b>दोस्त को लाएं:</b> आपके रेफरल से कोई AuraScale ले तो आप दोनों को 1 महीना फ्री।",
+"of.eg1":"<b>Hospital Combo, 1 साल:</b> ₹34,999 दें और 14 महीने चलाएं, महीने का सिर्फ ₹2,500।",
+"of.eg2":"<b>Pharmacy, 1 साल:</b> ₹4,599 दें और 14 महीने चलाएं, रोज़ 11 रुपये से भी कम।",
+"b15":"15 तक","b30":"16–30","b50":"31–50","th.plan":"प्लान",
+"rn.h2":"रिन्यूअल","rn.sub":"अवधि खत्म होने पर उसी कीमत पर फिर से लें। कोई रिन्यूअल फीस नहीं।",
+"tc.h2":"जानने योग्य बातें",
+"tc":[["GST सहित कीमत","इस पेज की हर कीमत में GST शामिल है। अलग से कुछ नहीं देना है।"],["7 दिन फ्री ट्रायल","7 दिन पूरा सॉफ्टवेयर मुफ्त चलाएं। सेटअप और स्टाफ ट्रेनिंग फ्री।"],["बेड के हिसाब से कीमत","Nursing Home और Hospital Combo की कीमत बेड की संख्या पर निर्भर है। सभी साइज़ देखने के लिए प्लान पर * दबाएं।"],["कीमत में बदलाव","कीमत बदलने की सूचना कम से कम 30 दिन पहले दी जाएगी। लॉन्च ऑफर के सालाना ग्राहकों की कीमत नहीं बढ़ेगी।"],["नीतियां","हमारी <a href=\"/terms\">नियम और शर्तें</a> और <a href=\"/refund\">रिफंड और रद्दीकरण नीति</a> देखें।"]],
+"cta.h2":"7 दिन का फ्री ट्रायल शुरू करें","cta.p":"हम सेटअप करते हैं और आपके स्टाफ को सिखाते हैं। कोई कार्ड नहीं चाहिए।",
+"mail.s":"AuraScale डेमो चाहिए","mail.b":"नमस्ते AuraScale,\n\nमुझे AuraScale OS का डेमो चाहिए।\n\nनाम:\nव्यवसाय का नाम:\nप्रकार (फार्मेसी / होलसेल / लैब / क्लिनिक / नर्सिंग होम):\nफोन:\nशहर:\n",
+"wa.t":"नमस्ते AuraScale, मुझे आपके प्लान के बारे में जानना है।","wa.plan":"नमस्ते AuraScale, मैं {p} प्लान का 7 दिन का फ्री ट्रायल शुरू करना चाहता/चाहती हूं।"
+}
+};
+
+function inr(n){ var s=String(Math.round(n)); if(s.length<=3) return '₹'+s; var last=s.slice(-3), rest=s.slice(0,-3); rest=rest.replace(/\B(?=(\d{2})+(?!\d))/g, ','); return '₹'+rest+','+last; }
+var LANG='en';
+function t(k){ return (T[LANG][k]!==undefined?T[LANG][k]:T.en[k]); }
+function mailHref(){ return 'mailto:'+EMAIL+'?subject='+encodeURIComponent(t('mail.s'))+'&body='+encodeURIComponent(t('mail.b')); }
+function waHref(text){ return 'https://wa.me/'+WA+'?text='+encodeURIComponent(text); }
+
+function bedsTable(id){
+  var h='<div class="beds" id="beds-'+id+'" hidden><table><thead><tr><th>'+t('beds.th')+'</th><th class="n">'+t('per').replace('/ ','')+'</th><th class="n">'+t('t.6s')+'</th><th class="n">'+t('t.12s')+'</th></tr></thead><tbody>';
+  BEDS[id].forEach(function(r){ h+='<tr><td>'+t(r[0])+'</td><td class="n">'+inr(r[1])+'</td><td class="n">'+inr(r[2])+'</td><td class="n">'+inr(r[3])+'</td></tr>'; });
+  return h+'</tbody></table></div>';
+}
+function renderPlans(){
+  var h='';
+  PLANS.forEach(function(p){
+    var tag=p.id==='nh'?'<span class="tag">'+t('tag.nh')+'</span>':p.id==='combo'?'<span class="tag g">'+t('tag.combo')+'</span>':'';
+    h+='<article class="plan'+(p.hl?' hl':'')+(p.best?' best':'')+'">'
+      +'<div class="p-top"><div><div class="p-name">'+t(p.id+'.n')+'</div><div class="p-who">'+t(p.id+'.w')+'</div></div>'+tag+'</div>'
+      +'<div class="p-price"><span class="p-amt">'+inr(p.m)+'</span><span class="p-per">'+t('per')+'</span></div>'
+      +'<div class="p-note">'+t('incl')+'</div>'
+      +(p.beds?'<button class="star-btn" aria-expanded="false" aria-controls="beds-'+p.id+'" onclick="toggleBeds(this,\''+p.id+'\')">'+t('beds.btn')+' <span class="st">*</span><svg class="ar" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+bedsTable(p.id):'')
+      +'<div class="rows">'
+        +'<div class="row"><span>'+t('t.6')+'</span><span><b>'+inr(p.h)+'</b><span class="save">'+t('save')+' '+inr(p.m*6-p.h)+'</span></span></div>'
+        +'<div class="row"><span>'+t('t.12')+'</span><span><b>'+inr(p.y)+'</b><span class="save">'+t('save')+' '+inr(p.m*12-p.y)+'</span></span></div>'
+      +'</div>'
+      +'<ul class="feat">'+t(p.id+'.f').map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul>'
+      +'<a class="btn '+(p.hl||p.best?'btn-p':'btn-o')+'" target="_blank" rel="noopener" href="'+waHref(t('wa.plan').replace('{p}',T.en[p.id+'.n']))+'">'+t('cta.plan')+'</a>'
+      +'</article>';
+  });
+  document.getElementById('plan-grid').innerHTML=h;
+}
+function toggleBeds(btn,id){
+  var el=document.getElementById('beds-'+id), open=el.hidden;
+  el.hidden=!open; btn.setAttribute('aria-expanded',open?'true':'false');
+}
+function renderRenewal(){
+  document.getElementById('rn-body').innerHTML=PLANS.map(function(p){
+    return '<tr><td>'+t(p.id+'.n')+(p.beds?' <span class="st">*</span>':'')+'</td><td class="n">'+inr(p.h)+'</td><td class="n">'+inr(p.y)+'</td></tr>';
+  }).join('');
+}
+function setLang(l){
+  if(!T[l]) l='en'; LANG=l;
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-k]').forEach(function(el){ var v=t(el.getAttribute('data-k')); if(typeof v==='string') el.innerHTML=v; });
+  document.querySelectorAll('[data-list]').forEach(function(el){ el.innerHTML=t(el.getAttribute('data-list')).map(function(x){return '<li>'+x+'</li>';}).join(''); });
+  document.querySelectorAll('.js-mail').forEach(function(a){ a.href=mailHref(); });
+  document.querySelectorAll('.js-wa').forEach(function(a){ a.href=waHref(t('wa.t')); });
+  ['en','bn','hi'].forEach(function(x){ var b=document.getElementById('lb-'+x); if(b) b.classList.toggle('active',x===l); });
+  renderPlans(); renderRenewal();
+  document.getElementById('tc-list').innerHTML=t('tc').map(function(x){return '<li><b>'+x[0]+':</b> '+x[1]+'</li>';}).join('');
+  try{ localStorage.setItem('aura-lang',l); }catch(e){}
+}
+(function(){
+  var l='en';
+  try{ var q=new URLSearchParams(location.search).get('lang'); l=q||localStorage.getItem('aura-lang')||'en'; }catch(e){}
+  setLang(l);
+})();
+</script>
+</body>
+</html>
