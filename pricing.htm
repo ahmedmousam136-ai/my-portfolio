@@ -75,6 +75,7 @@ h2{font-family:var(--fd);font-weight:800;font-size:clamp(1.3rem,3vw,1.75rem);lin
 .rows{display:grid;gap:6px;background:var(--surf);border-radius:12px;padding:10px 12px}
 .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:.92rem}
 .row b{font-variant-numeric:tabular-nums;color:var(--navy-d)}
+.offr{font-size:.74rem;color:var(--gold);font-weight:600;margin:-3px 0 2px;text-align:right}
 .save{font-size:.74rem;font-weight:700;color:var(--teal-d);margin-left:6px}
 .feat{list-style:none;display:grid;gap:6px;font-size:.88rem;color:#2C3E50}
 .feat li{display:flex;gap:8px}
@@ -223,7 +224,7 @@ en:{
 "hero.lede":"Pharmacy, wholesale, diagnostic lab, clinic or nursing home. Pay monthly, every 6 months or once a year. The longer you choose, the more you save.",
 "chip.gst":"All prices include GST","chip.trial":"7-day free trial","chip.setup":"Free setup and training",
 "t.m":"Monthly","t.6":"6 months","t.12":"1 year","per":"/ month","save":"save","incl":"Inclusive of GST",
-"beds.btn":"Up to 15 beds","beds.th":"Beds","t.6s":"6 mo","t.12s":"1 yr",
+"beds.btn":"Up to 15 beds","beds.th":"Beds","of.6r":"Launch offer: +1 month free, use for 7 months","of.12r":"Launch offer: +2 months free, use for 14 months","t.6s":"6 mo","t.12s":"1 yr",
 "tag.nh":"PM-JAY ready","tag.combo":"Best value",
 "pharmacy.n":"Pharmacy Retail","pharmacy.w":"Medicine shops and chemists",
 "pharmacy.f":["Bill from a photo of the prescription","Bills on WhatsApp, with GST shown","Substitutes, refill reminders, H1 register","Re-order from your wholesaler in one tap"],
@@ -259,7 +260,7 @@ bn:{
 "hero.lede":"ফার্মেসি, হোলসেল, ডায়াগনস্টিক ল্যাব, ক্লিনিক বা নার্সিং হোম। প্রতি মাসে, 6 মাসে বা বছরে একবার টাকা দিন। যত বেশি সময়ের জন্য নেবেন, তত বেশি সাশ্রয়।",
 "chip.gst":"সব দাম GST সহ","chip.trial":"7 দিন ফ্রি ট্রায়াল","chip.setup":"সেটআপ আর ট্রেনিং ফ্রি",
 "t.m":"প্রতি মাস","t.6":"6 মাস","t.12":"1 বছর","per":"/ মাস","save":"সাশ্রয়","incl":"GST সহ",
-"beds.btn":"15 বেড পর্যন্ত","beds.th":"বেড","t.6s":"6 মাস","t.12s":"1 বছর",
+"beds.btn":"15 বেড পর্যন্ত","beds.th":"বেড","of.6r":"উদ্বোধনী অফার: +1 মাস ফ্রি, চলবে 7 মাস","of.12r":"উদ্বোধনী অফার: +2 মাস ফ্রি, চলবে 14 মাস","t.6s":"6 মাস","t.12s":"1 বছর",
 "tag.nh":"PM-JAY রেডি","tag.combo":"সবচেয়ে লাভজনক",
 "pharmacy.n":"Pharmacy Retail","pharmacy.w":"ওষুধের দোকান ও কেমিস্ট",
 "pharmacy.f":["প্রেসক্রিপশনের ছবি থেকে বিল","বিল WhatsApp-এ, GST সহ","বদলি ওষুধ, রিফিল রিমাইন্ডার, H1 রেজিস্টার","হোলসেলারকে এক ক্লিকে রি-অর্ডার"],
@@ -295,7 +296,7 @@ hi:{
 "hero.lede":"फार्मेसी, होलसेल, डायग्नोस्टिक लैब, क्लिनिक या नर्सिंग होम। हर महीने, 6 महीने में या साल में एक बार भुगतान करें। जितनी लंबी अवधि, उतनी ज़्यादा बचत।",
 "chip.gst":"सभी कीमतें GST सहित","chip.trial":"7 दिन का फ्री ट्रायल","chip.setup":"सेटअप और ट्रेनिंग फ्री",
 "t.m":"प्रति माह","t.6":"6 महीने","t.12":"1 साल","per":"/ माह","save":"बचत","incl":"GST सहित",
-"beds.btn":"15 बेड तक","beds.th":"बेड","t.6s":"6 माह","t.12s":"1 साल",
+"beds.btn":"15 बेड तक","beds.th":"बेड","of.6r":"लॉन्च ऑफर: +1 महीना फ्री, चलेगा 7 महीने","of.12r":"लॉन्च ऑफर: +2 महीने फ्री, चलेगा 14 महीने","t.6s":"6 माह","t.12s":"1 साल",
 "tag.nh":"PM-JAY तैयार","tag.combo":"सबसे फायदेमंद",
 "pharmacy.n":"Pharmacy Retail","pharmacy.w":"दवा की दुकान और केमिस्ट",
 "pharmacy.f":["पर्ची की फोटो से बिल","बिल WhatsApp पर, GST के साथ","वैकल्पिक दवा, रिफिल रिमाइंडर, H1 रजिस्टर","होलसेलर को एक क्लिक में री-ऑर्डर"],
@@ -349,7 +350,9 @@ function renderPlans(){
       +(p.beds?'<button class="star-btn" aria-expanded="false" aria-controls="beds-'+p.id+'" onclick="toggleBeds(this,\''+p.id+'\')">'+t('beds.btn')+' <span class="st">*</span><svg class="ar" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+bedsTable(p.id):'')
       +'<div class="rows">'
         +'<div class="row"><span>'+t('t.6')+'</span><span><b>'+inr(p.h)+'</b><span class="save">'+t('save')+' '+inr(p.m*6-p.h)+'</span></span></div>'
+        +'<div class="offr">'+t('of.6r')+'</div>'
         +'<div class="row"><span>'+t('t.12')+'</span><span><b>'+inr(p.y)+'</b><span class="save">'+t('save')+' '+inr(p.m*12-p.y)+'</span></span></div>'
+        +'<div class="offr">'+t('of.12r')+'</div>'
       +'</div>'
       +'<ul class="feat">'+t(p.id+'.f').map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul>'
       +'<a class="btn '+(p.hl||p.best?'btn-p':'btn-o')+'" target="_blank" rel="noopener" href="'+waHref(t('wa.plan').replace('{p}',T.en[p.id+'.n']))+'">'+t('cta.plan')+'</a>'
